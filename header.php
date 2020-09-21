@@ -15,8 +15,10 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -25,18 +27,22 @@
 		<?php bulmapress_skip_link_screen_reader_text(); ?>
 		<header id="header">
 			<nav id="site-navigation" class="navbar" role="navigation">
-				<div class="navbar-brand">
-					<?php bulmapress_home_link('navbar-item'); ?>
-					<?php bulmapress_blog_description('navbar-item is-muted'); ?>
-					<?php bulmapress_menu_toggle(); ?>
-				</div>
-				<div class="navbar-menu">
-					<div class="navbar-start"></div>
-					<?php bulmapress_navigation(); ?>
-				</div>
+        <div class="container">
+  				<div class="navbar-brand">
+            <?php if( function_exists('the_custom_logo') ) : ?>
+  					  <?php the_custom_logo(); ?>
+            <?php else : ?>
+              <?php bulmapress_home_link('navbar-item'); ?>
+              <?php bulmapress_blog_description('navbar-item is-muted'); ?>
+            <?php endif; ?>
+  					<?php bulmapress_menu_toggle(); ?>
+  				</div>
+  				<div class="navbar-menu">
+  					<div class="navbar-start"></div>
+  					<?php bulmapress_navigation(); ?>
+  				</div>
+        </div>
 			</nav>
 		</header>
 
 		<div id="content" class="site-content">
-
-

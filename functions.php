@@ -29,6 +29,7 @@ function bulmapress_setup() {
 	require get_template_directory() . '/functions/widgets.php';
 	require get_template_directory() . '/functions/search.php';
 	require get_template_directory() . '/functions/scripts-styles.php';
+  require get_template_directory() . '/functions/custom-logo.php';
 }
 endif;
 add_action( 'after_setup_theme', 'bulmapress_setup' );
