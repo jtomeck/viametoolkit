@@ -1,8 +1,7 @@
-![screenshot.png](screenshot.png)
+# VIAME Toolkit WP
+## A WordPress flexbox theme based on Bulmapress
 
-# Bulmapress
-## A WordPress flexbox theme
-
+## About Bulmapress
 
 Hi. I'm a WordPress flexbox theme called Bulmapress.
 
@@ -13,34 +12,42 @@ Hi. I'm a WordPress flexbox theme called Bulmapress.
 - Stable tag: 0.0.3
 - License: [GNU General Public License v2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
 
-## Demo
+### Demo
 
 [bulmapress.scops.com](https://bulmapress.scops.com/)
 
+---
+
 ## Installation
 
+**Method 1:**
+1. Clone this repository into your Themes Folder
+2. In your admin panel, go to Appearance > Themes and activate the VIAME Toolkit WP theme.
+
+**Method 2:**
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-## Frequently Asked Questions
+## For Developers
+To watch for changes to the CSS, navigate to `themes/viametoolkit/frontend/bulmapress` and run `npm start` or `yarn start`. (note: installation or updating of these packages may be necessary)
 
-*Does this theme support any plugins?*
+## Basic features for editing the theme
+**Header:**
+- The logo can be uploaded in Appearance > Customize > Site Identity
+- To update the menu you can go to one of the following locations:
+  - Appearance > Customize > Menus
+  - Appearance > Menus
 
-Bulmapress includes support for Infinite Scroll in Jetpack.
+**Hero:**
+- The hero text and image can be updated in Appearance > Customize > Homepage Banner
+- The alert bar beneath the banner can be updated in Appearance > Customize > Homepage Banner Alert
 
-## Changelog
-
-- *v0.0.4 - Mar 02 2019*: 
-  - **Updated Bulma to 0.7.4**
-  - **Switched to [Bulma-Navwalker](https://github.com/Poruno/Bulma-Navwalker)**
-  - **Add Child-theme support**
-- *v0.0.3 - Jan 19 2019*: **Updated Bulma to 0.7.2**
-- *v0.0.2 - Dec 30 2017*: **Updated Bulma to 0.6.1**
-- *v0.0.1 - Jan 04 2017* : **Initial draft**
+**Footer:**
+- The footer text can be updated in Appearance > Customize > Footer Text
 
 ## Credits
-
+* Based on Bulmapress https://bulmapress.scops.com/
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * bulma.io http://bulma.io/, (C) 2017 Jeremy Thomas, [MIT](http://opensource.org/licenses/MIT)
 * https://github.com/Poruno/Bulma-Navwalker, (C) 2018 Carlo Operio - @Poruno, [MIT](http://opensource.org/licenses/MIT)
