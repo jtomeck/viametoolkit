@@ -2,7 +2,7 @@
 /**
  * Extra Functions
 *
- * @package Bulmapress
+ * @package VIAME Toolkit WP
  */
 
 /**

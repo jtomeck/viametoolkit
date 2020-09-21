@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Bulmapress
+ * @package VIAME Toolkit WP
  */
 
 if ( ! function_exists( 'bulmapress_posted_on' ) ) {

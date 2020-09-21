@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Bulmapress
+ * @package VIAME Toolkit WP
  */
 
 if ( ! function_exists( 'bulmapress_jetpack_setup' ) ) {

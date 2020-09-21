@@ -3,7 +3,7 @@
  * Custom Query Function
  *
  *
- * @package Bulmapress
+ * @package VIAME Toolkit WP
  */
 
 if ( ! function_exists( 'bulmapress_custom_query' ) ) {

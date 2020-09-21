@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Bulmapress
+ * @package VIAME Toolkit WP
  */
 
 /*

@@ -2,7 +2,7 @@
 /**
  * Widget Functions
  *
- * @package Bulmapress
+ * @package VIAME Toolkit WP
  */
 
 // Add theme support for selective refresh for widgets.
