@@ -47,6 +47,10 @@ To watch for changes to the CSS, navigate to `themes/viametoolkit/frontend/bulma
 **Footer:**
 - The footer text can be updated in Appearance > Customize > Footer Text
 
+## Dependencies
+- Advanced Custom Fields plugin (https://www.advancedcustomfields.com/)
+- Awesome Post Embeds plugin (https://github.com/jtomeck/awesome-post-embeds)
+
 ## Credits
 * Based on Bulmapress https://bulmapress.scops.com/
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
