@@ -25,9 +25,10 @@ Hi. I'm a WordPress flexbox theme called Bulmapress.
 2. In your admin panel, go to Appearance > Themes and activate the VIAME Toolkit WP theme.
 
 **Method 2:**
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+1. Download the theme from this repository
+2. In your admin panel, go to Appearance > Themes and click the Add New button.
+3. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
+4. Click Activate to use your new theme right away.
 
 ## For Developers
 To watch for changes to the CSS, navigate to `themes/viametoolkit/frontend/bulmapress` and run `npm start` or `yarn start`. (note: installation or updating of these packages may be necessary)
