@@ -1,5 +1,5 @@
 # VIAME Toolkit WP
-## A WordPress flexbox theme based on Bulmapress
+#### A WordPress flexbox theme based on Bulmapress
 
 ## About Bulmapress
 
