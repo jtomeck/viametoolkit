@@ -11,7 +11,7 @@
 
 <!-- Action Cards -->
 <?php if( have_rows('viame_action_cards') ) : ?>
-  <div class="action-cards columns">
+  <div class="action-cards columns is-centered">
   <?php while( have_rows('viame_action_cards') ) : the_row(); ?>
     <div class="column is-one-fifth">
       <?php

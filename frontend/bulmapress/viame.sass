@@ -25,6 +25,22 @@ h2
     border-color: $secondary
     color: $secondary
 
+// Video Play Button
+.has-play-btn
+  position: relative
+
+  &::after
+    background: url('../../img/play-button.svg') center center no-repeat
+    background-size: 100%
+    content: ''
+    height: 42px
+    left: 50%
+    pointer-events: none
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 42px
+
 // Cards
 .card
   display: block

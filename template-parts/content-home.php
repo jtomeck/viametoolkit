@@ -6,6 +6,8 @@
  *
  * @package VIAME Toolkit WP
  */
+
+$video = get_field('viame_video_embed');
 ?>
 
 <article class="home-about-viame section">
@@ -14,12 +16,25 @@
       <?php bulmapress_the_title('is-2', FALSE); ?>
 		</header><!-- .entry-header -->
 
-		<div class="content entry-content has-text-centered">
-			<?php the_content(); ?>
+  	<div class="content entry-content">
+      <?php if( $video ) : ?>
+        <div class="columns">
+          <div class="column has-play-btn pt-0">
+            <?php echo do_shortcode( $video ); ?>
+          </div>
+          <div class="column is-two-thirds pt-4 px-6">
+    			  <?php the_content(); ?>
+          </div>
+        </div>
+        <?php // Calls to Action
+        get_template_part( 'template-parts/home-action-cards' ); ?>
+      <?php else : ?>
+        <?php the_content(); ?>
 
-      <?php // Calls to Action
-      get_template_part( 'template-parts/home-action-cards' ); ?>
-		</div><!-- .entry-content -->
+        <?php // Calls to Action
+        get_template_part( 'template-parts/home-action-cards' ); ?>
+      <?php endif; ?>
+  	</div><!-- .entry-content -->
 	</div>
 </article><!-- #post-## -->
 
