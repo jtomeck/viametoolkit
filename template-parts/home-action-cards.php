@@ -11,9 +11,9 @@
 
 <!-- Action Cards -->
 <?php if( have_rows('viame_action_cards') ) : ?>
-  <div class="action-cards columns is-centered">
+  <div class="action-cards columns is-centered is-variable is-5">
   <?php while( have_rows('viame_action_cards') ) : the_row(); ?>
-    <div class="column is-one-fifth">
+    <div class="column is-one-quarter">
       <?php
         // Variables
         $icon = get_sub_field('viame_action_card_icon');

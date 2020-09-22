@@ -16,7 +16,7 @@ $video = get_field('viame_video_embed');
       <?php bulmapress_the_title('is-2', FALSE); ?>
 		</header><!-- .entry-header -->
 
-  	<div class="content entry-content">
+  	<div class="content entry-content px-6">
       <?php if( $video ) : ?>
         <div class="columns">
           <div class="column has-play-btn pt-0">
