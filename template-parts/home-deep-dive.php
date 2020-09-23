@@ -72,6 +72,20 @@ if( $group ): ?>
             </div>
           </div>
         <?php endif; ?>
+
+        <?php // Publications
+        $pubs = $group['viame_deep_dive_publications'];
+        if( $pubs ): ?>
+          <div class="acc-panel">
+            <input type="checkbox" id="chck3">
+            <label class="acc-panel-label" for="chck3">
+              <?php echo $pubs['viame_publications_title']; ?>
+            </label>
+            <div class="acc-panel-content content">
+              <?php echo do_shortcode( $pubs['viame_publications_list'] ); ?>
+            </div>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </article>
