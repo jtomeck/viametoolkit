@@ -19,10 +19,10 @@ $video = get_field('viame_video_embed');
   	<div class="content entry-content px-6">
       <?php if( $video ) : ?>
         <div class="columns">
-          <div class="column has-play-btn pt-0">
+          <div class="column has-play-btn vcenter-child">
             <?php echo do_shortcode( $video ); ?>
           </div>
-          <div class="column is-two-thirds pt-4 px-6">
+          <div class="column is-two-thirds px-6">
     			  <?php the_content(); ?>
           </div>
         </div>
