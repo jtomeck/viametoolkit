@@ -64,8 +64,12 @@ if( $group ): ?>
                     </a>
                   </div>
                   <div class="date-time column is-one-third">
-                    <span class="date-label">Date:</span> <?php echo $list['viame_deep_dive_event_list_date']; ?>
-                    <span class="time-label">Time:</span> <?php echo $list['viame_deep_dive_event_list_time']; ?>
+                    <?php if( $list['viame_deep_dive_event_list_date'] ) : ?>
+                      <span class="date-label">Date:</span> <?php echo $list['viame_deep_dive_event_list_date']; ?>
+                    <?php endif; ?>
+                    <?php if( $list['viame_deep_dive_event_list_time'] ) : ?>
+                      <span class="time-label">Time:</span> <?php echo $list['viame_deep_dive_event_list_time']; ?>
+                    <?php endif; ?>
                   </div>
                 </div>
               <?php endforeach; ?>
