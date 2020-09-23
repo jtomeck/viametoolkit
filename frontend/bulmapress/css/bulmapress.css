@@ -11310,6 +11310,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 /* ========================= */
+/* Helpers */
+/* ========================= */
+.vcenter-child {
+  align-items: center;
+  display: flex;
+}
+
+/* ========================= */
 /* Typography Styles */
 /* ========================= */
 h1,
@@ -11409,7 +11417,7 @@ h2 {
 }
 
 .accordion input:checked ~ .acc-panel-content {
-  max-height: 100vh;
+  max-height: 200vh;
   padding: 1em;
 }
 
@@ -11471,6 +11479,16 @@ h2 {
 
 .accordion .acc-panels .acc-panel-close:hover {
   background: #0c4e79;
+}
+
+.kwbib {
+  border-top: 1px solid #e0e0e0;
+}
+
+.kwbib-entry {
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0 !important;
+  padding: 5px 0;
 }
 
 .ape_post {
