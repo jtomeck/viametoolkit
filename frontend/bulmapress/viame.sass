@@ -100,8 +100,8 @@ h2
         &::after
           transform: rotate(90deg)
       ~ .acc-panel-content
-        max-height: 100%
-        padding: 1em
+        max-height: 0
+        padding: 0 1em
 
   /* Accordion styles */
   .acc-panels
@@ -139,10 +139,9 @@ h2
       &-content
         background: $white
         color: $primary
-        max-height: 0
+        max-height: 100%
         overflow: hidden
-        padding: 0 1em
-        transition: all .35s
+        padding: 1.5em 2em
 
       &-close
         background: $secondary
@@ -150,7 +149,7 @@ h2
         display: flex
         font-size: .75em
         justify-content: flex-end
-        padding: 1em
+        padding: 1.5em 2em
 
         &:hover
           background: darken($secondary, 10%)
