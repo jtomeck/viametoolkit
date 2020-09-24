@@ -34,7 +34,8 @@ $footer_text = get_theme_mod( 'viame_footer_text', '');
 bulmaCarousel.attach('.carousel', {
   pagination: 1,
 	slidesToScroll: 1,
-	slidesToShow: 3
+	slidesToShow: 3,
+  loop: true
 });
 </script>
 <?php endif; ?>
