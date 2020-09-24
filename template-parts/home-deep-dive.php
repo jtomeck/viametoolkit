@@ -18,7 +18,7 @@ if( $group ): ?>
     $blurb = $group['viame_deep_dive_blurb'];
   ?>
 
-  <article class="home-deep-dive section">
+  <article class="home-deep-dive px-6 section">
     <header class="content has-text-centered">
       <h2><?php echo $title; ?></h2>
       <?php echo $blurb; ?>
