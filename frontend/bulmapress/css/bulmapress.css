@@ -11421,8 +11421,8 @@ h2 {
 }
 
 .accordion input:checked ~ .acc-panel-content {
-  max-height: 100%;
-  padding: 1em;
+  max-height: 0;
+  padding: 0 1em;
 }
 
 .accordion .acc-panels {
@@ -11466,10 +11466,9 @@ h2 {
 .accordion .acc-panels .acc-panel-content {
   background: white;
   color: #254351;
-  max-height: 0;
+  max-height: 100%;
   overflow: hidden;
-  padding: 0 1em;
-  transition: all .35s;
+  padding: 1.5em 2em;
 }
 
 .accordion .acc-panels .acc-panel-close {
@@ -11478,7 +11477,7 @@ h2 {
   display: flex;
   font-size: .75em;
   justify-content: flex-end;
-  padding: 1em;
+  padding: 1.5em 2em;
 }
 
 .accordion .acc-panels .acc-panel-close:hover {
@@ -11491,8 +11490,9 @@ h2 {
 
 .kwbib-entry {
   border-bottom: 1px solid #e0e0e0;
+  font-size: 15px;
   margin: 0 !important;
-  padding: 5px 0;
+  padding: 15px 0;
 }
 
 .ape_post {
