@@ -11393,6 +11393,10 @@ h2 {
   border: 0;
 }
 
+.carousel .slider .slider-item > div {
+  height: 100%;
+}
+
 .accordion {
   /* Accordion styles */
 }
@@ -11417,7 +11421,7 @@ h2 {
 }
 
 .accordion input:checked ~ .acc-panel-content {
-  max-height: 200vh;
+  max-height: 100%;
   padding: 1em;
 }
 
