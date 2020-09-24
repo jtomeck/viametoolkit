@@ -16,13 +16,13 @@ $video = get_field('viame_video_embed');
       <?php bulmapress_the_title('is-2', FALSE); ?>
 		</header><!-- .entry-header -->
 
-  	<div class="content entry-content px-6">
+  	<div class="content entry-content px-4">
       <?php if( $video ) : ?>
         <div class="columns">
           <div class="column has-play-btn vcenter-child">
             <?php echo do_shortcode( $video ); ?>
           </div>
-          <div class="column is-two-thirds px-6">
+          <div class="column is-two-thirds px-4">
     			  <?php the_content(); ?>
           </div>
         </div>
