@@ -18,44 +18,48 @@
 
 class bulmapress_navwalker extends Walker_Nav_Menu {
 
-	public function start_lvl( &$output, $depth = 0, $args = array() ) {
-		
-		$output .= "<div class='navbar-dropdown'>";
-	}
+ 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 
-	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+ 		$output .= "<div class='navbar-dropdown'>";
+ 	}
 
-		$liClasses = 'navbar-item '.$item->title;
+ 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 
-		$hasChildren = $args->walker->has_children;
-		$liClasses .= $hasChildren? " has-dropdown is-hoverable": "";
+ 		$liClasses = 'navbar-item ';
 
-		if($hasChildren){
-			$output .= "<div class='".$liClasses."'>";
-			$output .= "\n<a class='navbar-link' href='".$item->url."'>".$item->title."</a>";
-		}
-		else {
-			$output .= "<a class='".$liClasses."' href='".$item->url."'>".$item->title;
-		}
+ 		$hasChildren = $args->walker->has_children;
+ 		$liClasses .= $hasChildren? " has-dropdown is-hoverable": "";
 
-		// Adds has_children class to the item so end_el can determine if the current element has children
-		if ( $hasChildren ) {
-			$item->classes[] = 'has_children';
-		}
-	}
-	
-	public function end_el(&$output, $item, $depth = 0, $args = array(), $id = 0 ){
+ 		if($hasChildren){
+ 			$output .= "<div class='".$liClasses."'>";
+ 			$output .= "<a class='navbar-link' href='".$item->url."'>".$item->title."</a>";
+ 		}
+ 		else {
+       $output .= "<a class='".$liClasses."' href='".$item->url."'";
+       if ($item->target) {
+         $output .= "target='".$item->target."'";
+       }
+       $output .= ">".$item->title;
+ 		}
 
-		if(in_array("has_children", $item->classes)) {
+ 		// Adds has_children class to the item so end_el can determine if the current element has children
+ 		if ( $hasChildren ) {
+ 			$item->classes[] = 'has_children';
+ 		}
+ 	}
 
-			$output .= "</div>";
-		}
-		$output .= "</a>";
-	}
+ 	public function end_el(&$output, $item, $depth = 0, $args = array(), $id = 0 ){
 
-	public function end_lvl (&$output, $depth = 0, $args = array()) {
+ 		if(in_array("has_children", $item->classes)) {
 
-		$output .= "</div>";
-	}
+ 			$output .= "</div>";
+ 		}
+ 		$output .= "</a>";
+ 	}
+
+ 	public function end_lvl (&$output, $depth = 0, $args = array()) {
+
+ 		$output .= "</div>";
+ 	}
 }
 ?>
