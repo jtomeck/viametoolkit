@@ -15,7 +15,7 @@
   }
 }
 
-.delete, .modal-close, .button, .file, .breadcrumb, .pagination-previous,
+.delete, .modal-close, .button, .wpcf7-form input[type='submit'], .file, .breadcrumb, .pagination-previous,
 .pagination-next,
 .pagination-link,
 .pagination-ellipsis, .tabs, .is-unselectable {
@@ -127,7 +127,7 @@
   width: 32px;
 }
 
-.button.is-loading::after, .loader, .select.is-loading::after, .control.is-loading::after {
+.button.is-loading::after, .wpcf7-form input.is-loading[type='submit']::after, .loader, .select.is-loading::after, .control.is-loading::after {
   animation: spinAround 500ms infinite linear;
   border: 2px solid #dbdbdb;
   border-radius: 290486px;
@@ -164,7 +164,7 @@
   top: 0;
 }
 
-.button, .input, .textarea, .select select, .file-cta,
+.button, .wpcf7-form input[type='submit'], .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
 .pagination-next,
 .pagination-link,
@@ -188,19 +188,19 @@
   vertical-align: top;
 }
 
-.button:focus, .input:focus, .textarea:focus, .select select:focus, .file-cta:focus,
+.button:focus, .wpcf7-form input:focus[type='submit'], .input:focus, .textarea:focus, .select select:focus, .file-cta:focus,
 .file-name:focus, .pagination-previous:focus,
 .pagination-next:focus,
 .pagination-link:focus,
-.pagination-ellipsis:focus, .is-focused.button, .is-focused.input, .is-focused.textarea, .select select.is-focused, .is-focused.file-cta,
+.pagination-ellipsis:focus, .is-focused.button, .wpcf7-form input.is-focused[type='submit'], .is-focused.input, .is-focused.textarea, .select select.is-focused, .is-focused.file-cta,
 .is-focused.file-name, .is-focused.pagination-previous,
 .is-focused.pagination-next,
 .is-focused.pagination-link,
-.is-focused.pagination-ellipsis, .button:active, .input:active, .textarea:active, .select select:active, .file-cta:active,
+.is-focused.pagination-ellipsis, .button:active, .wpcf7-form input:active[type='submit'], .input:active, .textarea:active, .select select:active, .file-cta:active,
 .file-name:active, .pagination-previous:active,
 .pagination-next:active,
 .pagination-link:active,
-.pagination-ellipsis:active, .is-active.button, .is-active.input, .is-active.textarea, .select select.is-active, .is-active.file-cta,
+.pagination-ellipsis:active, .is-active.button, .wpcf7-form input.is-active[type='submit'], .is-active.input, .is-active.textarea, .select select.is-active, .is-active.file-cta,
 .is-active.file-name, .is-active.pagination-previous,
 .is-active.pagination-next,
 .is-active.pagination-link,
@@ -208,12 +208,14 @@
   outline: none;
 }
 
-.button[disabled], .input[disabled], .textarea[disabled], .select select[disabled], .file-cta[disabled],
+.button[disabled], .wpcf7-form input[disabled][type='submit'], .input[disabled], .textarea[disabled], .select select[disabled], .file-cta[disabled],
 .file-name[disabled], .pagination-previous[disabled],
 .pagination-next[disabled],
 .pagination-link[disabled],
 .pagination-ellipsis[disabled],
 fieldset[disabled] .button,
+fieldset[disabled] .wpcf7-form input[type='submit'],
+.wpcf7-form fieldset[disabled] input[type='submit'],
 fieldset[disabled] .input,
 fieldset[disabled] .textarea,
 fieldset[disabled] .select select,
@@ -460,7 +462,7 @@ a.box:active {
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #106ca8;
 }
 
-.button {
+.button, .wpcf7-form input[type='submit'] {
   background-color: white;
   border-color: #dbdbdb;
   border-width: 1px;
@@ -475,1278 +477,1362 @@ a.box:active {
   white-space: nowrap;
 }
 
-.button strong {
+.button strong, .wpcf7-form input[type='submit'] strong {
   color: inherit;
 }
 
-.button .icon, .button .icon.is-small, .button .icon.is-medium, .button .icon.is-large {
+.button .icon, .wpcf7-form input[type='submit'] .icon, .button .icon.is-small, .wpcf7-form input[type='submit'] .icon.is-small, .button .icon.is-medium, .wpcf7-form input[type='submit'] .icon.is-medium, .button .icon.is-large, .wpcf7-form input[type='submit'] .icon.is-large {
   height: 1.5em;
   width: 1.5em;
 }
 
-.button .icon:first-child:not(:last-child) {
+.button .icon:first-child:not(:last-child), .wpcf7-form input[type='submit'] .icon:first-child:not(:last-child) {
   margin-left: calc(-0.5em - 1px);
   margin-right: 0.25em;
 }
 
-.button .icon:last-child:not(:first-child) {
+.button .icon:last-child:not(:first-child), .wpcf7-form input[type='submit'] .icon:last-child:not(:first-child) {
   margin-left: 0.25em;
   margin-right: calc(-0.5em - 1px);
 }
 
-.button .icon:first-child:last-child {
+.button .icon:first-child:last-child, .wpcf7-form input[type='submit'] .icon:first-child:last-child {
   margin-left: calc(-0.5em - 1px);
   margin-right: calc(-0.5em - 1px);
 }
 
-.button:hover, .button.is-hovered {
+.button:hover, .wpcf7-form input:hover[type='submit'], .button.is-hovered, .wpcf7-form input.is-hovered[type='submit'] {
   border-color: #b5b5b5;
   color: #363636;
 }
 
-.button:focus, .button.is-focused {
+.button:focus, .wpcf7-form input:focus[type='submit'], .button.is-focused, .wpcf7-form input.is-focused[type='submit'] {
   border-color: #3273dc;
   color: #363636;
 }
 
-.button:focus:not(:active), .button.is-focused:not(:active) {
+.button:focus:not(:active), .wpcf7-form input:focus:not(:active)[type='submit'], .button.is-focused:not(:active), .wpcf7-form input.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(16, 108, 168, 0.25);
 }
 
-.button:active, .button.is-active {
+.button:active, .wpcf7-form input:active[type='submit'], .button.is-active, .wpcf7-form input.is-active[type='submit'] {
   border-color: #4a4a4a;
   color: #363636;
 }
 
-.button.is-text {
+.button.is-text, .wpcf7-form input.is-text[type='submit'] {
   background-color: transparent;
   border-color: transparent;
   color: #4a4a4a;
   text-decoration: underline;
 }
 
-.button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
+.button.is-text:hover, .wpcf7-form input.is-text:hover[type='submit'], .button.is-text.is-hovered, .wpcf7-form input.is-text.is-hovered[type='submit'], .button.is-text:focus, .wpcf7-form input.is-text:focus[type='submit'], .button.is-text.is-focused, .wpcf7-form input.is-text.is-focused[type='submit'] {
   background-color: whitesmoke;
   color: #363636;
 }
 
-.button.is-text:active, .button.is-text.is-active {
+.button.is-text:active, .wpcf7-form input.is-text:active[type='submit'], .button.is-text.is-active, .wpcf7-form input.is-text.is-active[type='submit'] {
   background-color: #e8e8e8;
   color: #363636;
 }
 
-.button.is-text[disabled],
-fieldset[disabled] .button.is-text {
+.button.is-text[disabled], .wpcf7-form input.is-text[disabled][type='submit'],
+fieldset[disabled] .button.is-text,
+fieldset[disabled] .wpcf7-form input.is-text[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-text[type='submit'] {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-white {
+.button.is-white, .wpcf7-form input.is-white[type='submit'] {
   background-color: white;
   border-color: transparent;
   color: #0a0a0a;
 }
 
-.button.is-white:hover, .button.is-white.is-hovered {
+.button.is-white:hover, .wpcf7-form input.is-white:hover[type='submit'], .button.is-white.is-hovered, .wpcf7-form input.is-white.is-hovered[type='submit'] {
   background-color: #f9f9f9;
   border-color: transparent;
   color: #0a0a0a;
 }
 
-.button.is-white:focus, .button.is-white.is-focused {
+.button.is-white:focus, .wpcf7-form input.is-white:focus[type='submit'], .button.is-white.is-focused, .wpcf7-form input.is-white.is-focused[type='submit'] {
   border-color: transparent;
   color: #0a0a0a;
 }
 
-.button.is-white:focus:not(:active), .button.is-white.is-focused:not(:active) {
+.button.is-white:focus:not(:active), .wpcf7-form input.is-white:focus:not(:active)[type='submit'], .button.is-white.is-focused:not(:active), .wpcf7-form input.is-white.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
 }
 
-.button.is-white:active, .button.is-white.is-active {
+.button.is-white:active, .wpcf7-form input.is-white:active[type='submit'], .button.is-white.is-active, .wpcf7-form input.is-white.is-active[type='submit'] {
   background-color: #f2f2f2;
   border-color: transparent;
   color: #0a0a0a;
 }
 
-.button.is-white[disabled],
-fieldset[disabled] .button.is-white {
+.button.is-white[disabled], .wpcf7-form input.is-white[disabled][type='submit'],
+fieldset[disabled] .button.is-white,
+fieldset[disabled] .wpcf7-form input.is-white[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-white[type='submit'] {
   background-color: white;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-white.is-inverted {
+.button.is-white.is-inverted, .wpcf7-form input.is-white.is-inverted[type='submit'] {
   background-color: #0a0a0a;
   color: white;
 }
 
-.button.is-white.is-inverted:hover, .button.is-white.is-inverted.is-hovered {
+.button.is-white.is-inverted:hover, .wpcf7-form input.is-white.is-inverted:hover[type='submit'], .button.is-white.is-inverted.is-hovered, .wpcf7-form input.is-white.is-inverted.is-hovered[type='submit'] {
   background-color: black;
 }
 
-.button.is-white.is-inverted[disabled],
-fieldset[disabled] .button.is-white.is-inverted {
+.button.is-white.is-inverted[disabled], .wpcf7-form input.is-white.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-white.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-white.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-white.is-inverted[type='submit'] {
   background-color: #0a0a0a;
   border-color: transparent;
   box-shadow: none;
   color: white;
 }
 
-.button.is-white.is-loading::after {
+.button.is-white.is-loading::after, .wpcf7-form input.is-white.is-loading[type='submit']::after {
   border-color: transparent transparent #0a0a0a #0a0a0a !important;
 }
 
-.button.is-white.is-outlined {
+.button.is-white.is-outlined, .wpcf7-form input.is-white.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: white;
   color: white;
 }
 
-.button.is-white.is-outlined:hover, .button.is-white.is-outlined.is-hovered, .button.is-white.is-outlined:focus, .button.is-white.is-outlined.is-focused {
+.button.is-white.is-outlined:hover, .wpcf7-form input.is-white.is-outlined:hover[type='submit'], .button.is-white.is-outlined.is-hovered, .wpcf7-form input.is-white.is-outlined.is-hovered[type='submit'], .button.is-white.is-outlined:focus, .wpcf7-form input.is-white.is-outlined:focus[type='submit'], .button.is-white.is-outlined.is-focused, .wpcf7-form input.is-white.is-outlined.is-focused[type='submit'] {
   background-color: white;
   border-color: white;
   color: #0a0a0a;
 }
 
-.button.is-white.is-outlined.is-loading::after {
+.button.is-white.is-outlined.is-loading::after, .wpcf7-form input.is-white.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent white white !important;
 }
 
-.button.is-white.is-outlined.is-loading:hover::after, .button.is-white.is-outlined.is-loading.is-hovered::after, .button.is-white.is-outlined.is-loading:focus::after, .button.is-white.is-outlined.is-loading.is-focused::after {
+.button.is-white.is-outlined.is-loading:hover::after, .wpcf7-form input.is-white.is-outlined.is-loading[type='submit']:hover::after, .button.is-white.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-white.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-white.is-outlined.is-loading:focus::after, .wpcf7-form input.is-white.is-outlined.is-loading[type='submit']:focus::after, .button.is-white.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-white.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #0a0a0a #0a0a0a !important;
 }
 
-.button.is-white.is-outlined[disabled],
-fieldset[disabled] .button.is-white.is-outlined {
+.button.is-white.is-outlined[disabled], .wpcf7-form input.is-white.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-white.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-white.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-white.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: white;
   box-shadow: none;
   color: white;
 }
 
-.button.is-white.is-inverted.is-outlined {
+.button.is-white.is-inverted.is-outlined, .wpcf7-form input.is-white.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #0a0a0a;
   color: #0a0a0a;
 }
 
-.button.is-white.is-inverted.is-outlined:hover, .button.is-white.is-inverted.is-outlined.is-hovered, .button.is-white.is-inverted.is-outlined:focus, .button.is-white.is-inverted.is-outlined.is-focused {
+.button.is-white.is-inverted.is-outlined:hover, .wpcf7-form input.is-white.is-inverted.is-outlined:hover[type='submit'], .button.is-white.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-white.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-white.is-inverted.is-outlined:focus, .wpcf7-form input.is-white.is-inverted.is-outlined:focus[type='submit'], .button.is-white.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-white.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: #0a0a0a;
   color: white;
 }
 
-.button.is-white.is-inverted.is-outlined.is-loading:hover::after, .button.is-white.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-white.is-inverted.is-outlined.is-loading:focus::after, .button.is-white.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-white.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-white.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-white.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-white.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-white.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-white.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-white.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-white.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent white white !important;
 }
 
-.button.is-white.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-white.is-inverted.is-outlined {
+.button.is-white.is-inverted.is-outlined[disabled], .wpcf7-form input.is-white.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-white.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-white.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-white.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #0a0a0a;
   box-shadow: none;
   color: #0a0a0a;
 }
 
-.button.is-black {
+.button.is-black, .wpcf7-form input.is-black[type='submit'] {
   background-color: #0a0a0a;
   border-color: transparent;
   color: white;
 }
 
-.button.is-black:hover, .button.is-black.is-hovered {
+.button.is-black:hover, .wpcf7-form input.is-black:hover[type='submit'], .button.is-black.is-hovered, .wpcf7-form input.is-black.is-hovered[type='submit'] {
   background-color: #040404;
   border-color: transparent;
   color: white;
 }
 
-.button.is-black:focus, .button.is-black.is-focused {
+.button.is-black:focus, .wpcf7-form input.is-black:focus[type='submit'], .button.is-black.is-focused, .wpcf7-form input.is-black.is-focused[type='submit'] {
   border-color: transparent;
   color: white;
 }
 
-.button.is-black:focus:not(:active), .button.is-black.is-focused:not(:active) {
+.button.is-black:focus:not(:active), .wpcf7-form input.is-black:focus:not(:active)[type='submit'], .button.is-black.is-focused:not(:active), .wpcf7-form input.is-black.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);
 }
 
-.button.is-black:active, .button.is-black.is-active {
+.button.is-black:active, .wpcf7-form input.is-black:active[type='submit'], .button.is-black.is-active, .wpcf7-form input.is-black.is-active[type='submit'] {
   background-color: black;
   border-color: transparent;
   color: white;
 }
 
-.button.is-black[disabled],
-fieldset[disabled] .button.is-black {
+.button.is-black[disabled], .wpcf7-form input.is-black[disabled][type='submit'],
+fieldset[disabled] .button.is-black,
+fieldset[disabled] .wpcf7-form input.is-black[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-black[type='submit'] {
   background-color: #0a0a0a;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-black.is-inverted {
+.button.is-black.is-inverted, .wpcf7-form input.is-black.is-inverted[type='submit'] {
   background-color: white;
   color: #0a0a0a;
 }
 
-.button.is-black.is-inverted:hover, .button.is-black.is-inverted.is-hovered {
+.button.is-black.is-inverted:hover, .wpcf7-form input.is-black.is-inverted:hover[type='submit'], .button.is-black.is-inverted.is-hovered, .wpcf7-form input.is-black.is-inverted.is-hovered[type='submit'] {
   background-color: #f2f2f2;
 }
 
-.button.is-black.is-inverted[disabled],
-fieldset[disabled] .button.is-black.is-inverted {
+.button.is-black.is-inverted[disabled], .wpcf7-form input.is-black.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-black.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-black.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-black.is-inverted[type='submit'] {
   background-color: white;
   border-color: transparent;
   box-shadow: none;
   color: #0a0a0a;
 }
 
-.button.is-black.is-loading::after {
+.button.is-black.is-loading::after, .wpcf7-form input.is-black.is-loading[type='submit']::after {
   border-color: transparent transparent white white !important;
 }
 
-.button.is-black.is-outlined {
+.button.is-black.is-outlined, .wpcf7-form input.is-black.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #0a0a0a;
   color: #0a0a0a;
 }
 
-.button.is-black.is-outlined:hover, .button.is-black.is-outlined.is-hovered, .button.is-black.is-outlined:focus, .button.is-black.is-outlined.is-focused {
+.button.is-black.is-outlined:hover, .wpcf7-form input.is-black.is-outlined:hover[type='submit'], .button.is-black.is-outlined.is-hovered, .wpcf7-form input.is-black.is-outlined.is-hovered[type='submit'], .button.is-black.is-outlined:focus, .wpcf7-form input.is-black.is-outlined:focus[type='submit'], .button.is-black.is-outlined.is-focused, .wpcf7-form input.is-black.is-outlined.is-focused[type='submit'] {
   background-color: #0a0a0a;
   border-color: #0a0a0a;
   color: white;
 }
 
-.button.is-black.is-outlined.is-loading::after {
+.button.is-black.is-outlined.is-loading::after, .wpcf7-form input.is-black.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent #0a0a0a #0a0a0a !important;
 }
 
-.button.is-black.is-outlined.is-loading:hover::after, .button.is-black.is-outlined.is-loading.is-hovered::after, .button.is-black.is-outlined.is-loading:focus::after, .button.is-black.is-outlined.is-loading.is-focused::after {
+.button.is-black.is-outlined.is-loading:hover::after, .wpcf7-form input.is-black.is-outlined.is-loading[type='submit']:hover::after, .button.is-black.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-black.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-black.is-outlined.is-loading:focus::after, .wpcf7-form input.is-black.is-outlined.is-loading[type='submit']:focus::after, .button.is-black.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-black.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent white white !important;
 }
 
-.button.is-black.is-outlined[disabled],
-fieldset[disabled] .button.is-black.is-outlined {
+.button.is-black.is-outlined[disabled], .wpcf7-form input.is-black.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-black.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-black.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-black.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #0a0a0a;
   box-shadow: none;
   color: #0a0a0a;
 }
 
-.button.is-black.is-inverted.is-outlined {
+.button.is-black.is-inverted.is-outlined, .wpcf7-form input.is-black.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: white;
   color: white;
 }
 
-.button.is-black.is-inverted.is-outlined:hover, .button.is-black.is-inverted.is-outlined.is-hovered, .button.is-black.is-inverted.is-outlined:focus, .button.is-black.is-inverted.is-outlined.is-focused {
+.button.is-black.is-inverted.is-outlined:hover, .wpcf7-form input.is-black.is-inverted.is-outlined:hover[type='submit'], .button.is-black.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-black.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-black.is-inverted.is-outlined:focus, .wpcf7-form input.is-black.is-inverted.is-outlined:focus[type='submit'], .button.is-black.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-black.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: white;
   color: #0a0a0a;
 }
 
-.button.is-black.is-inverted.is-outlined.is-loading:hover::after, .button.is-black.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-black.is-inverted.is-outlined.is-loading:focus::after, .button.is-black.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-black.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-black.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-black.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-black.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-black.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-black.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-black.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-black.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #0a0a0a #0a0a0a !important;
 }
 
-.button.is-black.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-black.is-inverted.is-outlined {
+.button.is-black.is-inverted.is-outlined[disabled], .wpcf7-form input.is-black.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-black.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-black.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-black.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: white;
   box-shadow: none;
   color: white;
 }
 
-.button.is-light {
+.button.is-light, .wpcf7-form input.is-light[type='submit'] {
   background-color: whitesmoke;
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.button.is-light:hover, .button.is-light.is-hovered {
+.button.is-light:hover, .wpcf7-form input.is-light:hover[type='submit'], .button.is-light.is-hovered, .wpcf7-form input.is-light.is-hovered[type='submit'] {
   background-color: #eeeeee;
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.button.is-light:focus, .button.is-light.is-focused {
+.button.is-light:focus, .wpcf7-form input.is-light:focus[type='submit'], .button.is-light.is-focused, .wpcf7-form input.is-light.is-focused[type='submit'] {
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.button.is-light:focus:not(:active), .button.is-light.is-focused:not(:active) {
+.button.is-light:focus:not(:active), .wpcf7-form input.is-light:focus:not(:active)[type='submit'], .button.is-light.is-focused:not(:active), .wpcf7-form input.is-light.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
 }
 
-.button.is-light:active, .button.is-light.is-active {
+.button.is-light:active, .wpcf7-form input.is-light:active[type='submit'], .button.is-light.is-active, .wpcf7-form input.is-light.is-active[type='submit'] {
   background-color: #e8e8e8;
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.button.is-light[disabled],
-fieldset[disabled] .button.is-light {
+.button.is-light[disabled], .wpcf7-form input.is-light[disabled][type='submit'],
+fieldset[disabled] .button.is-light,
+fieldset[disabled] .wpcf7-form input.is-light[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-light[type='submit'] {
   background-color: whitesmoke;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-light.is-inverted {
+.button.is-light.is-inverted, .wpcf7-form input.is-light.is-inverted[type='submit'] {
   background-color: rgba(0, 0, 0, 0.7);
   color: whitesmoke;
 }
 
-.button.is-light.is-inverted:hover, .button.is-light.is-inverted.is-hovered {
+.button.is-light.is-inverted:hover, .wpcf7-form input.is-light.is-inverted:hover[type='submit'], .button.is-light.is-inverted.is-hovered, .wpcf7-form input.is-light.is-inverted.is-hovered[type='submit'] {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.button.is-light.is-inverted[disabled],
-fieldset[disabled] .button.is-light.is-inverted {
+.button.is-light.is-inverted[disabled], .wpcf7-form input.is-light.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-light.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-light.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-light.is-inverted[type='submit'] {
   background-color: rgba(0, 0, 0, 0.7);
   border-color: transparent;
   box-shadow: none;
   color: whitesmoke;
 }
 
-.button.is-light.is-loading::after {
+.button.is-light.is-loading::after, .wpcf7-form input.is-light.is-loading[type='submit']::after {
   border-color: transparent transparent rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.7) !important;
 }
 
-.button.is-light.is-outlined {
+.button.is-light.is-outlined, .wpcf7-form input.is-light.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: whitesmoke;
   color: whitesmoke;
 }
 
-.button.is-light.is-outlined:hover, .button.is-light.is-outlined.is-hovered, .button.is-light.is-outlined:focus, .button.is-light.is-outlined.is-focused {
+.button.is-light.is-outlined:hover, .wpcf7-form input.is-light.is-outlined:hover[type='submit'], .button.is-light.is-outlined.is-hovered, .wpcf7-form input.is-light.is-outlined.is-hovered[type='submit'], .button.is-light.is-outlined:focus, .wpcf7-form input.is-light.is-outlined:focus[type='submit'], .button.is-light.is-outlined.is-focused, .wpcf7-form input.is-light.is-outlined.is-focused[type='submit'] {
   background-color: whitesmoke;
   border-color: whitesmoke;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.button.is-light.is-outlined.is-loading::after {
+.button.is-light.is-outlined.is-loading::after, .wpcf7-form input.is-light.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent whitesmoke whitesmoke !important;
 }
 
-.button.is-light.is-outlined.is-loading:hover::after, .button.is-light.is-outlined.is-loading.is-hovered::after, .button.is-light.is-outlined.is-loading:focus::after, .button.is-light.is-outlined.is-loading.is-focused::after {
+.button.is-light.is-outlined.is-loading:hover::after, .wpcf7-form input.is-light.is-outlined.is-loading[type='submit']:hover::after, .button.is-light.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-light.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-light.is-outlined.is-loading:focus::after, .wpcf7-form input.is-light.is-outlined.is-loading[type='submit']:focus::after, .button.is-light.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-light.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.7) !important;
 }
 
-.button.is-light.is-outlined[disabled],
-fieldset[disabled] .button.is-light.is-outlined {
+.button.is-light.is-outlined[disabled], .wpcf7-form input.is-light.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-light.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-light.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-light.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: whitesmoke;
   box-shadow: none;
   color: whitesmoke;
 }
 
-.button.is-light.is-inverted.is-outlined {
+.button.is-light.is-inverted.is-outlined, .wpcf7-form input.is-light.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.7);
   color: rgba(0, 0, 0, 0.7);
 }
 
-.button.is-light.is-inverted.is-outlined:hover, .button.is-light.is-inverted.is-outlined.is-hovered, .button.is-light.is-inverted.is-outlined:focus, .button.is-light.is-inverted.is-outlined.is-focused {
+.button.is-light.is-inverted.is-outlined:hover, .wpcf7-form input.is-light.is-inverted.is-outlined:hover[type='submit'], .button.is-light.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-light.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-light.is-inverted.is-outlined:focus, .wpcf7-form input.is-light.is-inverted.is-outlined:focus[type='submit'], .button.is-light.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-light.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: rgba(0, 0, 0, 0.7);
   color: whitesmoke;
 }
 
-.button.is-light.is-inverted.is-outlined.is-loading:hover::after, .button.is-light.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-light.is-inverted.is-outlined.is-loading:focus::after, .button.is-light.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-light.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-light.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-light.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-light.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-light.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-light.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-light.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-light.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent whitesmoke whitesmoke !important;
 }
 
-.button.is-light.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-light.is-inverted.is-outlined {
+.button.is-light.is-inverted.is-outlined[disabled], .wpcf7-form input.is-light.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-light.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-light.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-light.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.7);
   box-shadow: none;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.button.is-dark {
+.button.is-dark, .wpcf7-form input.is-dark[type='submit'] {
   background-color: #363636;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-dark:hover, .button.is-dark.is-hovered {
+.button.is-dark:hover, .wpcf7-form input.is-dark:hover[type='submit'], .button.is-dark.is-hovered, .wpcf7-form input.is-dark.is-hovered[type='submit'] {
   background-color: #2f2f2f;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-dark:focus, .button.is-dark.is-focused {
+.button.is-dark:focus, .wpcf7-form input.is-dark:focus[type='submit'], .button.is-dark.is-focused, .wpcf7-form input.is-dark.is-focused[type='submit'] {
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-dark:focus:not(:active), .button.is-dark.is-focused:not(:active) {
+.button.is-dark:focus:not(:active), .wpcf7-form input.is-dark:focus:not(:active)[type='submit'], .button.is-dark.is-focused:not(:active), .wpcf7-form input.is-dark.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);
 }
 
-.button.is-dark:active, .button.is-dark.is-active {
+.button.is-dark:active, .wpcf7-form input.is-dark:active[type='submit'], .button.is-dark.is-active, .wpcf7-form input.is-dark.is-active[type='submit'] {
   background-color: #292929;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-dark[disabled],
-fieldset[disabled] .button.is-dark {
+.button.is-dark[disabled], .wpcf7-form input.is-dark[disabled][type='submit'],
+fieldset[disabled] .button.is-dark,
+fieldset[disabled] .wpcf7-form input.is-dark[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-dark[type='submit'] {
   background-color: #363636;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-dark.is-inverted {
+.button.is-dark.is-inverted, .wpcf7-form input.is-dark.is-inverted[type='submit'] {
   background-color: #fff;
   color: #363636;
 }
 
-.button.is-dark.is-inverted:hover, .button.is-dark.is-inverted.is-hovered {
+.button.is-dark.is-inverted:hover, .wpcf7-form input.is-dark.is-inverted:hover[type='submit'], .button.is-dark.is-inverted.is-hovered, .wpcf7-form input.is-dark.is-inverted.is-hovered[type='submit'] {
   background-color: #f2f2f2;
 }
 
-.button.is-dark.is-inverted[disabled],
-fieldset[disabled] .button.is-dark.is-inverted {
+.button.is-dark.is-inverted[disabled], .wpcf7-form input.is-dark.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-dark.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-dark.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-dark.is-inverted[type='submit'] {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
   color: #363636;
 }
 
-.button.is-dark.is-loading::after {
+.button.is-dark.is-loading::after, .wpcf7-form input.is-dark.is-loading[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-dark.is-outlined {
+.button.is-dark.is-outlined, .wpcf7-form input.is-dark.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #363636;
   color: #363636;
 }
 
-.button.is-dark.is-outlined:hover, .button.is-dark.is-outlined.is-hovered, .button.is-dark.is-outlined:focus, .button.is-dark.is-outlined.is-focused {
+.button.is-dark.is-outlined:hover, .wpcf7-form input.is-dark.is-outlined:hover[type='submit'], .button.is-dark.is-outlined.is-hovered, .wpcf7-form input.is-dark.is-outlined.is-hovered[type='submit'], .button.is-dark.is-outlined:focus, .wpcf7-form input.is-dark.is-outlined:focus[type='submit'], .button.is-dark.is-outlined.is-focused, .wpcf7-form input.is-dark.is-outlined.is-focused[type='submit'] {
   background-color: #363636;
   border-color: #363636;
   color: #fff;
 }
 
-.button.is-dark.is-outlined.is-loading::after {
+.button.is-dark.is-outlined.is-loading::after, .wpcf7-form input.is-dark.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent #363636 #363636 !important;
 }
 
-.button.is-dark.is-outlined.is-loading:hover::after, .button.is-dark.is-outlined.is-loading.is-hovered::after, .button.is-dark.is-outlined.is-loading:focus::after, .button.is-dark.is-outlined.is-loading.is-focused::after {
+.button.is-dark.is-outlined.is-loading:hover::after, .wpcf7-form input.is-dark.is-outlined.is-loading[type='submit']:hover::after, .button.is-dark.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-dark.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-dark.is-outlined.is-loading:focus::after, .wpcf7-form input.is-dark.is-outlined.is-loading[type='submit']:focus::after, .button.is-dark.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-dark.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-dark.is-outlined[disabled],
-fieldset[disabled] .button.is-dark.is-outlined {
+.button.is-dark.is-outlined[disabled], .wpcf7-form input.is-dark.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-dark.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-dark.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-dark.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #363636;
   box-shadow: none;
   color: #363636;
 }
 
-.button.is-dark.is-inverted.is-outlined {
+.button.is-dark.is-inverted.is-outlined, .wpcf7-form input.is-dark.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-.button.is-dark.is-inverted.is-outlined:hover, .button.is-dark.is-inverted.is-outlined.is-hovered, .button.is-dark.is-inverted.is-outlined:focus, .button.is-dark.is-inverted.is-outlined.is-focused {
+.button.is-dark.is-inverted.is-outlined:hover, .wpcf7-form input.is-dark.is-inverted.is-outlined:hover[type='submit'], .button.is-dark.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-dark.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-dark.is-inverted.is-outlined:focus, .wpcf7-form input.is-dark.is-inverted.is-outlined:focus[type='submit'], .button.is-dark.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-dark.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: #fff;
   color: #363636;
 }
 
-.button.is-dark.is-inverted.is-outlined.is-loading:hover::after, .button.is-dark.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-dark.is-inverted.is-outlined.is-loading:focus::after, .button.is-dark.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-dark.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-dark.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-dark.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-dark.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-dark.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-dark.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-dark.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-dark.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #363636 #363636 !important;
 }
 
-.button.is-dark.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
+.button.is-dark.is-inverted.is-outlined[disabled], .wpcf7-form input.is-dark.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-dark.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-dark.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-dark.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   box-shadow: none;
   color: #fff;
 }
 
-.button.is-primary {
+.button.is-primary, .wpcf7-form input.is-primary[type='submit'] {
   background-color: #254351;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-primary:hover, .button.is-primary.is-hovered {
+.button.is-primary:hover, .wpcf7-form input.is-primary:hover[type='submit'], .button.is-primary.is-hovered, .wpcf7-form input.is-primary.is-hovered[type='submit'] {
   background-color: #213c48;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-primary:focus, .button.is-primary.is-focused {
+.button.is-primary:focus, .wpcf7-form input.is-primary:focus[type='submit'], .button.is-primary.is-focused, .wpcf7-form input.is-primary.is-focused[type='submit'] {
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-primary:focus:not(:active), .button.is-primary.is-focused:not(:active) {
+.button.is-primary:focus:not(:active), .wpcf7-form input.is-primary:focus:not(:active)[type='submit'], .button.is-primary.is-focused:not(:active), .wpcf7-form input.is-primary.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(37, 67, 81, 0.25);
 }
 
-.button.is-primary:active, .button.is-primary.is-active {
+.button.is-primary:active, .wpcf7-form input.is-primary:active[type='submit'], .button.is-primary.is-active, .wpcf7-form input.is-primary.is-active[type='submit'] {
   background-color: #1d353f;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-primary[disabled],
-fieldset[disabled] .button.is-primary {
+.button.is-primary[disabled], .wpcf7-form input.is-primary[disabled][type='submit'],
+fieldset[disabled] .button.is-primary,
+fieldset[disabled] .wpcf7-form input.is-primary[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-primary[type='submit'] {
   background-color: #254351;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-primary.is-inverted {
+.button.is-primary.is-inverted, .wpcf7-form input.is-primary.is-inverted[type='submit'] {
   background-color: #fff;
   color: #254351;
 }
 
-.button.is-primary.is-inverted:hover, .button.is-primary.is-inverted.is-hovered {
+.button.is-primary.is-inverted:hover, .wpcf7-form input.is-primary.is-inverted:hover[type='submit'], .button.is-primary.is-inverted.is-hovered, .wpcf7-form input.is-primary.is-inverted.is-hovered[type='submit'] {
   background-color: #f2f2f2;
 }
 
-.button.is-primary.is-inverted[disabled],
-fieldset[disabled] .button.is-primary.is-inverted {
+.button.is-primary.is-inverted[disabled], .wpcf7-form input.is-primary.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-primary.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-primary.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-primary.is-inverted[type='submit'] {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
   color: #254351;
 }
 
-.button.is-primary.is-loading::after {
+.button.is-primary.is-loading::after, .wpcf7-form input.is-primary.is-loading[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-primary.is-outlined {
+.button.is-primary.is-outlined, .wpcf7-form input.is-primary.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #254351;
   color: #254351;
 }
 
-.button.is-primary.is-outlined:hover, .button.is-primary.is-outlined.is-hovered, .button.is-primary.is-outlined:focus, .button.is-primary.is-outlined.is-focused {
+.button.is-primary.is-outlined:hover, .wpcf7-form input.is-primary.is-outlined:hover[type='submit'], .button.is-primary.is-outlined.is-hovered, .wpcf7-form input.is-primary.is-outlined.is-hovered[type='submit'], .button.is-primary.is-outlined:focus, .wpcf7-form input.is-primary.is-outlined:focus[type='submit'], .button.is-primary.is-outlined.is-focused, .wpcf7-form input.is-primary.is-outlined.is-focused[type='submit'] {
   background-color: #254351;
   border-color: #254351;
   color: #fff;
 }
 
-.button.is-primary.is-outlined.is-loading::after {
+.button.is-primary.is-outlined.is-loading::after, .wpcf7-form input.is-primary.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent #254351 #254351 !important;
 }
 
-.button.is-primary.is-outlined.is-loading:hover::after, .button.is-primary.is-outlined.is-loading.is-hovered::after, .button.is-primary.is-outlined.is-loading:focus::after, .button.is-primary.is-outlined.is-loading.is-focused::after {
+.button.is-primary.is-outlined.is-loading:hover::after, .wpcf7-form input.is-primary.is-outlined.is-loading[type='submit']:hover::after, .button.is-primary.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-primary.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-primary.is-outlined.is-loading:focus::after, .wpcf7-form input.is-primary.is-outlined.is-loading[type='submit']:focus::after, .button.is-primary.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-primary.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-primary.is-outlined[disabled],
-fieldset[disabled] .button.is-primary.is-outlined {
+.button.is-primary.is-outlined[disabled], .wpcf7-form input.is-primary.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-primary.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-primary.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-primary.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #254351;
   box-shadow: none;
   color: #254351;
 }
 
-.button.is-primary.is-inverted.is-outlined {
+.button.is-primary.is-inverted.is-outlined, .wpcf7-form input.is-primary.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-.button.is-primary.is-inverted.is-outlined:hover, .button.is-primary.is-inverted.is-outlined.is-hovered, .button.is-primary.is-inverted.is-outlined:focus, .button.is-primary.is-inverted.is-outlined.is-focused {
+.button.is-primary.is-inverted.is-outlined:hover, .wpcf7-form input.is-primary.is-inverted.is-outlined:hover[type='submit'], .button.is-primary.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-primary.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-primary.is-inverted.is-outlined:focus, .wpcf7-form input.is-primary.is-inverted.is-outlined:focus[type='submit'], .button.is-primary.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-primary.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: #fff;
   color: #254351;
 }
 
-.button.is-primary.is-inverted.is-outlined.is-loading:hover::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-primary.is-inverted.is-outlined.is-loading:focus::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-primary.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-primary.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-primary.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-primary.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-primary.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-primary.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #254351 #254351 !important;
 }
 
-.button.is-primary.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
+.button.is-primary.is-inverted.is-outlined[disabled], .wpcf7-form input.is-primary.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-primary.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-primary.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-primary.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   box-shadow: none;
   color: #fff;
 }
 
-.button.is-primary.is-light {
+.button.is-primary.is-light, .wpcf7-form input.is-primary.is-light[type='submit'] {
   background-color: #f1f6f9;
   color: #5a97b4;
 }
 
-.button.is-primary.is-light:hover, .button.is-primary.is-light.is-hovered {
+.button.is-primary.is-light:hover, .wpcf7-form input.is-primary.is-light:hover[type='submit'], .button.is-primary.is-light.is-hovered, .wpcf7-form input.is-primary.is-light.is-hovered[type='submit'] {
   background-color: #e8f1f5;
   border-color: transparent;
   color: #5a97b4;
 }
 
-.button.is-primary.is-light:active, .button.is-primary.is-light.is-active {
+.button.is-primary.is-light:active, .wpcf7-form input.is-primary.is-light:active[type='submit'], .button.is-primary.is-light.is-active, .wpcf7-form input.is-primary.is-light.is-active[type='submit'] {
   background-color: #dfebf1;
   border-color: transparent;
   color: #5a97b4;
 }
 
-.button.is-link {
+.button.is-link, .wpcf7-form input.is-link[type='submit'] {
   background-color: #106ca8;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-link:hover, .button.is-link.is-hovered {
+.button.is-link:hover, .wpcf7-form input.is-link:hover[type='submit'], .button.is-link.is-hovered, .wpcf7-form input.is-link.is-hovered[type='submit'] {
   background-color: #0f659c;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-link:focus, .button.is-link.is-focused {
+.button.is-link:focus, .wpcf7-form input.is-link:focus[type='submit'], .button.is-link.is-focused, .wpcf7-form input.is-link.is-focused[type='submit'] {
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-link:focus:not(:active), .button.is-link.is-focused:not(:active) {
+.button.is-link:focus:not(:active), .wpcf7-form input.is-link:focus:not(:active)[type='submit'], .button.is-link.is-focused:not(:active), .wpcf7-form input.is-link.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(16, 108, 168, 0.25);
 }
 
-.button.is-link:active, .button.is-link.is-active {
+.button.is-link:active, .wpcf7-form input.is-link:active[type='submit'], .button.is-link.is-active, .wpcf7-form input.is-link.is-active[type='submit'] {
   background-color: #0e5d91;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-link[disabled],
-fieldset[disabled] .button.is-link {
+.button.is-link[disabled], .wpcf7-form input.is-link[disabled][type='submit'],
+fieldset[disabled] .button.is-link,
+fieldset[disabled] .wpcf7-form input.is-link[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-link[type='submit'] {
   background-color: #106ca8;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-link.is-inverted {
+.button.is-link.is-inverted, .wpcf7-form input.is-link.is-inverted[type='submit'] {
   background-color: #fff;
   color: #106ca8;
 }
 
-.button.is-link.is-inverted:hover, .button.is-link.is-inverted.is-hovered {
+.button.is-link.is-inverted:hover, .wpcf7-form input.is-link.is-inverted:hover[type='submit'], .button.is-link.is-inverted.is-hovered, .wpcf7-form input.is-link.is-inverted.is-hovered[type='submit'] {
   background-color: #f2f2f2;
 }
 
-.button.is-link.is-inverted[disabled],
-fieldset[disabled] .button.is-link.is-inverted {
+.button.is-link.is-inverted[disabled], .wpcf7-form input.is-link.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-link.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-link.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-link.is-inverted[type='submit'] {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
   color: #106ca8;
 }
 
-.button.is-link.is-loading::after {
+.button.is-link.is-loading::after, .wpcf7-form input.is-link.is-loading[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-link.is-outlined {
+.button.is-link.is-outlined, .wpcf7-form input.is-link.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #106ca8;
   color: #106ca8;
 }
 
-.button.is-link.is-outlined:hover, .button.is-link.is-outlined.is-hovered, .button.is-link.is-outlined:focus, .button.is-link.is-outlined.is-focused {
+.button.is-link.is-outlined:hover, .wpcf7-form input.is-link.is-outlined:hover[type='submit'], .button.is-link.is-outlined.is-hovered, .wpcf7-form input.is-link.is-outlined.is-hovered[type='submit'], .button.is-link.is-outlined:focus, .wpcf7-form input.is-link.is-outlined:focus[type='submit'], .button.is-link.is-outlined.is-focused, .wpcf7-form input.is-link.is-outlined.is-focused[type='submit'] {
   background-color: #106ca8;
   border-color: #106ca8;
   color: #fff;
 }
 
-.button.is-link.is-outlined.is-loading::after {
+.button.is-link.is-outlined.is-loading::after, .wpcf7-form input.is-link.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent #106ca8 #106ca8 !important;
 }
 
-.button.is-link.is-outlined.is-loading:hover::after, .button.is-link.is-outlined.is-loading.is-hovered::after, .button.is-link.is-outlined.is-loading:focus::after, .button.is-link.is-outlined.is-loading.is-focused::after {
+.button.is-link.is-outlined.is-loading:hover::after, .wpcf7-form input.is-link.is-outlined.is-loading[type='submit']:hover::after, .button.is-link.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-link.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-link.is-outlined.is-loading:focus::after, .wpcf7-form input.is-link.is-outlined.is-loading[type='submit']:focus::after, .button.is-link.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-link.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-link.is-outlined[disabled],
-fieldset[disabled] .button.is-link.is-outlined {
+.button.is-link.is-outlined[disabled], .wpcf7-form input.is-link.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-link.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-link.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-link.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #106ca8;
   box-shadow: none;
   color: #106ca8;
 }
 
-.button.is-link.is-inverted.is-outlined {
+.button.is-link.is-inverted.is-outlined, .wpcf7-form input.is-link.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-.button.is-link.is-inverted.is-outlined:hover, .button.is-link.is-inverted.is-outlined.is-hovered, .button.is-link.is-inverted.is-outlined:focus, .button.is-link.is-inverted.is-outlined.is-focused {
+.button.is-link.is-inverted.is-outlined:hover, .wpcf7-form input.is-link.is-inverted.is-outlined:hover[type='submit'], .button.is-link.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-link.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-link.is-inverted.is-outlined:focus, .wpcf7-form input.is-link.is-inverted.is-outlined:focus[type='submit'], .button.is-link.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-link.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: #fff;
   color: #106ca8;
 }
 
-.button.is-link.is-inverted.is-outlined.is-loading:hover::after, .button.is-link.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-link.is-inverted.is-outlined.is-loading:focus::after, .button.is-link.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-link.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-link.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-link.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-link.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-link.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-link.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-link.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-link.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #106ca8 #106ca8 !important;
 }
 
-.button.is-link.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-link.is-inverted.is-outlined {
+.button.is-link.is-inverted.is-outlined[disabled], .wpcf7-form input.is-link.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-link.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-link.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-link.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   box-shadow: none;
   color: #fff;
 }
 
-.button.is-link.is-light {
+.button.is-link.is-light, .wpcf7-form input.is-link.is-light[type='submit'] {
   background-color: #ecf7fd;
   color: #158ddb;
 }
 
-.button.is-link.is-light:hover, .button.is-link.is-light.is-hovered {
+.button.is-link.is-light:hover, .wpcf7-form input.is-link.is-light:hover[type='submit'], .button.is-link.is-light.is-hovered, .wpcf7-form input.is-link.is-light.is-hovered[type='submit'] {
   background-color: #e1f1fc;
   border-color: transparent;
   color: #158ddb;
 }
 
-.button.is-link.is-light:active, .button.is-link.is-light.is-active {
+.button.is-link.is-light:active, .wpcf7-form input.is-link.is-light:active[type='submit'], .button.is-link.is-light.is-active, .wpcf7-form input.is-link.is-light.is-active[type='submit'] {
   background-color: #d5ecfb;
   border-color: transparent;
   color: #158ddb;
 }
 
-.button.is-info {
+.button.is-info, .wpcf7-form input.is-info[type='submit'] {
   background-color: #209cee;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-info:hover, .button.is-info.is-hovered {
+.button.is-info:hover, .wpcf7-form input.is-info:hover[type='submit'], .button.is-info.is-hovered, .wpcf7-form input.is-info.is-hovered[type='submit'] {
   background-color: #1496ed;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-info:focus, .button.is-info.is-focused {
+.button.is-info:focus, .wpcf7-form input.is-info:focus[type='submit'], .button.is-info.is-focused, .wpcf7-form input.is-info.is-focused[type='submit'] {
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-info:focus:not(:active), .button.is-info.is-focused:not(:active) {
+.button.is-info:focus:not(:active), .wpcf7-form input.is-info:focus:not(:active)[type='submit'], .button.is-info.is-focused:not(:active), .wpcf7-form input.is-info.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
 }
 
-.button.is-info:active, .button.is-info.is-active {
+.button.is-info:active, .wpcf7-form input.is-info:active[type='submit'], .button.is-info.is-active, .wpcf7-form input.is-info.is-active[type='submit'] {
   background-color: #118fe4;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-info[disabled],
-fieldset[disabled] .button.is-info {
+.button.is-info[disabled], .wpcf7-form input.is-info[disabled][type='submit'],
+fieldset[disabled] .button.is-info,
+fieldset[disabled] .wpcf7-form input.is-info[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-info[type='submit'] {
   background-color: #209cee;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-info.is-inverted {
+.button.is-info.is-inverted, .wpcf7-form input.is-info.is-inverted[type='submit'] {
   background-color: #fff;
   color: #209cee;
 }
 
-.button.is-info.is-inverted:hover, .button.is-info.is-inverted.is-hovered {
+.button.is-info.is-inverted:hover, .wpcf7-form input.is-info.is-inverted:hover[type='submit'], .button.is-info.is-inverted.is-hovered, .wpcf7-form input.is-info.is-inverted.is-hovered[type='submit'] {
   background-color: #f2f2f2;
 }
 
-.button.is-info.is-inverted[disabled],
-fieldset[disabled] .button.is-info.is-inverted {
+.button.is-info.is-inverted[disabled], .wpcf7-form input.is-info.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-info.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-info.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-info.is-inverted[type='submit'] {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
   color: #209cee;
 }
 
-.button.is-info.is-loading::after {
+.button.is-info.is-loading::after, .wpcf7-form input.is-info.is-loading[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-info.is-outlined {
+.button.is-info.is-outlined, .wpcf7-form input.is-info.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #209cee;
   color: #209cee;
 }
 
-.button.is-info.is-outlined:hover, .button.is-info.is-outlined.is-hovered, .button.is-info.is-outlined:focus, .button.is-info.is-outlined.is-focused {
+.button.is-info.is-outlined:hover, .wpcf7-form input.is-info.is-outlined:hover[type='submit'], .button.is-info.is-outlined.is-hovered, .wpcf7-form input.is-info.is-outlined.is-hovered[type='submit'], .button.is-info.is-outlined:focus, .wpcf7-form input.is-info.is-outlined:focus[type='submit'], .button.is-info.is-outlined.is-focused, .wpcf7-form input.is-info.is-outlined.is-focused[type='submit'] {
   background-color: #209cee;
   border-color: #209cee;
   color: #fff;
 }
 
-.button.is-info.is-outlined.is-loading::after {
+.button.is-info.is-outlined.is-loading::after, .wpcf7-form input.is-info.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent #209cee #209cee !important;
 }
 
-.button.is-info.is-outlined.is-loading:hover::after, .button.is-info.is-outlined.is-loading.is-hovered::after, .button.is-info.is-outlined.is-loading:focus::after, .button.is-info.is-outlined.is-loading.is-focused::after {
+.button.is-info.is-outlined.is-loading:hover::after, .wpcf7-form input.is-info.is-outlined.is-loading[type='submit']:hover::after, .button.is-info.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-info.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-info.is-outlined.is-loading:focus::after, .wpcf7-form input.is-info.is-outlined.is-loading[type='submit']:focus::after, .button.is-info.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-info.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-info.is-outlined[disabled],
-fieldset[disabled] .button.is-info.is-outlined {
+.button.is-info.is-outlined[disabled], .wpcf7-form input.is-info.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-info.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-info.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-info.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #209cee;
   box-shadow: none;
   color: #209cee;
 }
 
-.button.is-info.is-inverted.is-outlined {
+.button.is-info.is-inverted.is-outlined, .wpcf7-form input.is-info.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-.button.is-info.is-inverted.is-outlined:hover, .button.is-info.is-inverted.is-outlined.is-hovered, .button.is-info.is-inverted.is-outlined:focus, .button.is-info.is-inverted.is-outlined.is-focused {
+.button.is-info.is-inverted.is-outlined:hover, .wpcf7-form input.is-info.is-inverted.is-outlined:hover[type='submit'], .button.is-info.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-info.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-info.is-inverted.is-outlined:focus, .wpcf7-form input.is-info.is-inverted.is-outlined:focus[type='submit'], .button.is-info.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-info.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: #fff;
   color: #209cee;
 }
 
-.button.is-info.is-inverted.is-outlined.is-loading:hover::after, .button.is-info.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-info.is-inverted.is-outlined.is-loading:focus::after, .button.is-info.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-info.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-info.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-info.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-info.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-info.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-info.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-info.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-info.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #209cee #209cee !important;
 }
 
-.button.is-info.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-info.is-inverted.is-outlined {
+.button.is-info.is-inverted.is-outlined[disabled], .wpcf7-form input.is-info.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-info.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-info.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-info.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   box-shadow: none;
   color: #fff;
 }
 
-.button.is-info.is-light {
+.button.is-info.is-light, .wpcf7-form input.is-info.is-light[type='submit'] {
   background-color: #ecf7fe;
   color: #0e72b4;
 }
 
-.button.is-info.is-light:hover, .button.is-info.is-light.is-hovered {
+.button.is-info.is-light:hover, .wpcf7-form input.is-info.is-light:hover[type='submit'], .button.is-info.is-light.is-hovered, .wpcf7-form input.is-info.is-light.is-hovered[type='submit'] {
   background-color: #e0f1fd;
   border-color: transparent;
   color: #0e72b4;
 }
 
-.button.is-info.is-light:active, .button.is-info.is-light.is-active {
+.button.is-info.is-light:active, .wpcf7-form input.is-info.is-light:active[type='submit'], .button.is-info.is-light.is-active, .wpcf7-form input.is-info.is-light.is-active[type='submit'] {
   background-color: #d4ecfc;
   border-color: transparent;
   color: #0e72b4;
 }
 
-.button.is-success {
+.button.is-success, .wpcf7-form input.is-success[type='submit'] {
   background-color: #23d160;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-success:hover, .button.is-success.is-hovered {
+.button.is-success:hover, .wpcf7-form input.is-success:hover[type='submit'], .button.is-success.is-hovered, .wpcf7-form input.is-success.is-hovered[type='submit'] {
   background-color: #22c65b;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-success:focus, .button.is-success.is-focused {
+.button.is-success:focus, .wpcf7-form input.is-success:focus[type='submit'], .button.is-success.is-focused, .wpcf7-form input.is-success.is-focused[type='submit'] {
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-success:focus:not(:active), .button.is-success.is-focused:not(:active) {
+.button.is-success:focus:not(:active), .wpcf7-form input.is-success:focus:not(:active)[type='submit'], .button.is-success.is-focused:not(:active), .wpcf7-form input.is-success.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);
 }
 
-.button.is-success:active, .button.is-success.is-active {
+.button.is-success:active, .wpcf7-form input.is-success:active[type='submit'], .button.is-success.is-active, .wpcf7-form input.is-success.is-active[type='submit'] {
   background-color: #20bc56;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-success[disabled],
-fieldset[disabled] .button.is-success {
+.button.is-success[disabled], .wpcf7-form input.is-success[disabled][type='submit'],
+fieldset[disabled] .button.is-success,
+fieldset[disabled] .wpcf7-form input.is-success[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-success[type='submit'] {
   background-color: #23d160;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-success.is-inverted {
+.button.is-success.is-inverted, .wpcf7-form input.is-success.is-inverted[type='submit'] {
   background-color: #fff;
   color: #23d160;
 }
 
-.button.is-success.is-inverted:hover, .button.is-success.is-inverted.is-hovered {
+.button.is-success.is-inverted:hover, .wpcf7-form input.is-success.is-inverted:hover[type='submit'], .button.is-success.is-inverted.is-hovered, .wpcf7-form input.is-success.is-inverted.is-hovered[type='submit'] {
   background-color: #f2f2f2;
 }
 
-.button.is-success.is-inverted[disabled],
-fieldset[disabled] .button.is-success.is-inverted {
+.button.is-success.is-inverted[disabled], .wpcf7-form input.is-success.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-success.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-success.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-success.is-inverted[type='submit'] {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
   color: #23d160;
 }
 
-.button.is-success.is-loading::after {
+.button.is-success.is-loading::after, .wpcf7-form input.is-success.is-loading[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-success.is-outlined {
+.button.is-success.is-outlined, .wpcf7-form input.is-success.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #23d160;
   color: #23d160;
 }
 
-.button.is-success.is-outlined:hover, .button.is-success.is-outlined.is-hovered, .button.is-success.is-outlined:focus, .button.is-success.is-outlined.is-focused {
+.button.is-success.is-outlined:hover, .wpcf7-form input.is-success.is-outlined:hover[type='submit'], .button.is-success.is-outlined.is-hovered, .wpcf7-form input.is-success.is-outlined.is-hovered[type='submit'], .button.is-success.is-outlined:focus, .wpcf7-form input.is-success.is-outlined:focus[type='submit'], .button.is-success.is-outlined.is-focused, .wpcf7-form input.is-success.is-outlined.is-focused[type='submit'] {
   background-color: #23d160;
   border-color: #23d160;
   color: #fff;
 }
 
-.button.is-success.is-outlined.is-loading::after {
+.button.is-success.is-outlined.is-loading::after, .wpcf7-form input.is-success.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent #23d160 #23d160 !important;
 }
 
-.button.is-success.is-outlined.is-loading:hover::after, .button.is-success.is-outlined.is-loading.is-hovered::after, .button.is-success.is-outlined.is-loading:focus::after, .button.is-success.is-outlined.is-loading.is-focused::after {
+.button.is-success.is-outlined.is-loading:hover::after, .wpcf7-form input.is-success.is-outlined.is-loading[type='submit']:hover::after, .button.is-success.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-success.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-success.is-outlined.is-loading:focus::after, .wpcf7-form input.is-success.is-outlined.is-loading[type='submit']:focus::after, .button.is-success.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-success.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-success.is-outlined[disabled],
-fieldset[disabled] .button.is-success.is-outlined {
+.button.is-success.is-outlined[disabled], .wpcf7-form input.is-success.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-success.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-success.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-success.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #23d160;
   box-shadow: none;
   color: #23d160;
 }
 
-.button.is-success.is-inverted.is-outlined {
+.button.is-success.is-inverted.is-outlined, .wpcf7-form input.is-success.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-.button.is-success.is-inverted.is-outlined:hover, .button.is-success.is-inverted.is-outlined.is-hovered, .button.is-success.is-inverted.is-outlined:focus, .button.is-success.is-inverted.is-outlined.is-focused {
+.button.is-success.is-inverted.is-outlined:hover, .wpcf7-form input.is-success.is-inverted.is-outlined:hover[type='submit'], .button.is-success.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-success.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-success.is-inverted.is-outlined:focus, .wpcf7-form input.is-success.is-inverted.is-outlined:focus[type='submit'], .button.is-success.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-success.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: #fff;
   color: #23d160;
 }
 
-.button.is-success.is-inverted.is-outlined.is-loading:hover::after, .button.is-success.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-success.is-inverted.is-outlined.is-loading:focus::after, .button.is-success.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-success.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-success.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-success.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-success.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-success.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-success.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-success.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-success.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #23d160 #23d160 !important;
 }
 
-.button.is-success.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-success.is-inverted.is-outlined {
+.button.is-success.is-inverted.is-outlined[disabled], .wpcf7-form input.is-success.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-success.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-success.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-success.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   box-shadow: none;
   color: #fff;
 }
 
-.button.is-success.is-light {
+.button.is-success.is-light, .wpcf7-form input.is-success.is-light[type='submit'] {
   background-color: #eefcf3;
   color: #16833c;
 }
 
-.button.is-success.is-light:hover, .button.is-success.is-light.is-hovered {
+.button.is-success.is-light:hover, .wpcf7-form input.is-success.is-light:hover[type='submit'], .button.is-success.is-light.is-hovered, .wpcf7-form input.is-success.is-light.is-hovered[type='submit'] {
   background-color: #e3faeb;
   border-color: transparent;
   color: #16833c;
 }
 
-.button.is-success.is-light:active, .button.is-success.is-light.is-active {
+.button.is-success.is-light:active, .wpcf7-form input.is-success.is-light:active[type='submit'], .button.is-success.is-light.is-active, .wpcf7-form input.is-success.is-light.is-active[type='submit'] {
   background-color: #d8f8e3;
   border-color: transparent;
   color: #16833c;
 }
 
-.button.is-warning {
+.button.is-warning, .wpcf7-form input.is-warning[type='submit'] {
   background-color: #ff470f;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-warning:hover, .button.is-warning.is-hovered {
+.button.is-warning:hover, .wpcf7-form input.is-warning:hover[type='submit'], .button.is-warning.is-hovered, .wpcf7-form input.is-warning.is-hovered[type='submit'] {
   background-color: #ff3d03;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-warning:focus, .button.is-warning.is-focused {
+.button.is-warning:focus, .wpcf7-form input.is-warning:focus[type='submit'], .button.is-warning.is-focused, .wpcf7-form input.is-warning.is-focused[type='submit'] {
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-warning:focus:not(:active), .button.is-warning.is-focused:not(:active) {
+.button.is-warning:focus:not(:active), .wpcf7-form input.is-warning:focus:not(:active)[type='submit'], .button.is-warning.is-focused:not(:active), .wpcf7-form input.is-warning.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(255, 71, 15, 0.25);
 }
 
-.button.is-warning:active, .button.is-warning.is-active {
+.button.is-warning:active, .wpcf7-form input.is-warning:active[type='submit'], .button.is-warning.is-active, .wpcf7-form input.is-warning.is-active[type='submit'] {
   background-color: #f53900;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-warning[disabled],
-fieldset[disabled] .button.is-warning {
+.button.is-warning[disabled], .wpcf7-form input.is-warning[disabled][type='submit'],
+fieldset[disabled] .button.is-warning,
+fieldset[disabled] .wpcf7-form input.is-warning[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-warning[type='submit'] {
   background-color: #ff470f;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-warning.is-inverted {
+.button.is-warning.is-inverted, .wpcf7-form input.is-warning.is-inverted[type='submit'] {
   background-color: #fff;
   color: #ff470f;
 }
 
-.button.is-warning.is-inverted:hover, .button.is-warning.is-inverted.is-hovered {
+.button.is-warning.is-inverted:hover, .wpcf7-form input.is-warning.is-inverted:hover[type='submit'], .button.is-warning.is-inverted.is-hovered, .wpcf7-form input.is-warning.is-inverted.is-hovered[type='submit'] {
   background-color: #f2f2f2;
 }
 
-.button.is-warning.is-inverted[disabled],
-fieldset[disabled] .button.is-warning.is-inverted {
+.button.is-warning.is-inverted[disabled], .wpcf7-form input.is-warning.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-warning.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-warning.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-warning.is-inverted[type='submit'] {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
   color: #ff470f;
 }
 
-.button.is-warning.is-loading::after {
+.button.is-warning.is-loading::after, .wpcf7-form input.is-warning.is-loading[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-warning.is-outlined {
+.button.is-warning.is-outlined, .wpcf7-form input.is-warning.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #ff470f;
   color: #ff470f;
 }
 
-.button.is-warning.is-outlined:hover, .button.is-warning.is-outlined.is-hovered, .button.is-warning.is-outlined:focus, .button.is-warning.is-outlined.is-focused {
+.button.is-warning.is-outlined:hover, .wpcf7-form input.is-warning.is-outlined:hover[type='submit'], .button.is-warning.is-outlined.is-hovered, .wpcf7-form input.is-warning.is-outlined.is-hovered[type='submit'], .button.is-warning.is-outlined:focus, .wpcf7-form input.is-warning.is-outlined:focus[type='submit'], .button.is-warning.is-outlined.is-focused, .wpcf7-form input.is-warning.is-outlined.is-focused[type='submit'] {
   background-color: #ff470f;
   border-color: #ff470f;
   color: #fff;
 }
 
-.button.is-warning.is-outlined.is-loading::after {
+.button.is-warning.is-outlined.is-loading::after, .wpcf7-form input.is-warning.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent #ff470f #ff470f !important;
 }
 
-.button.is-warning.is-outlined.is-loading:hover::after, .button.is-warning.is-outlined.is-loading.is-hovered::after, .button.is-warning.is-outlined.is-loading:focus::after, .button.is-warning.is-outlined.is-loading.is-focused::after {
+.button.is-warning.is-outlined.is-loading:hover::after, .wpcf7-form input.is-warning.is-outlined.is-loading[type='submit']:hover::after, .button.is-warning.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-warning.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-warning.is-outlined.is-loading:focus::after, .wpcf7-form input.is-warning.is-outlined.is-loading[type='submit']:focus::after, .button.is-warning.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-warning.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-warning.is-outlined[disabled],
-fieldset[disabled] .button.is-warning.is-outlined {
+.button.is-warning.is-outlined[disabled], .wpcf7-form input.is-warning.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-warning.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-warning.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-warning.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #ff470f;
   box-shadow: none;
   color: #ff470f;
 }
 
-.button.is-warning.is-inverted.is-outlined {
+.button.is-warning.is-inverted.is-outlined, .wpcf7-form input.is-warning.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-.button.is-warning.is-inverted.is-outlined:hover, .button.is-warning.is-inverted.is-outlined.is-hovered, .button.is-warning.is-inverted.is-outlined:focus, .button.is-warning.is-inverted.is-outlined.is-focused {
+.button.is-warning.is-inverted.is-outlined:hover, .wpcf7-form input.is-warning.is-inverted.is-outlined:hover[type='submit'], .button.is-warning.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-warning.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-warning.is-inverted.is-outlined:focus, .wpcf7-form input.is-warning.is-inverted.is-outlined:focus[type='submit'], .button.is-warning.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-warning.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: #fff;
   color: #ff470f;
 }
 
-.button.is-warning.is-inverted.is-outlined.is-loading:hover::after, .button.is-warning.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-warning.is-inverted.is-outlined.is-loading:focus::after, .button.is-warning.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-warning.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-warning.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-warning.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-warning.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-warning.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-warning.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-warning.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-warning.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #ff470f #ff470f !important;
 }
 
-.button.is-warning.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-warning.is-inverted.is-outlined {
+.button.is-warning.is-inverted.is-outlined[disabled], .wpcf7-form input.is-warning.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-warning.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-warning.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-warning.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   box-shadow: none;
   color: #fff;
 }
 
-.button.is-warning.is-light {
+.button.is-warning.is-light, .wpcf7-form input.is-warning.is-light[type='submit'] {
   background-color: #ffefeb;
   color: #d63200;
 }
 
-.button.is-warning.is-light:hover, .button.is-warning.is-light.is-hovered {
+.button.is-warning.is-light:hover, .wpcf7-form input.is-warning.is-light:hover[type='submit'], .button.is-warning.is-light.is-hovered, .wpcf7-form input.is-warning.is-light.is-hovered[type='submit'] {
   background-color: #ffe6de;
   border-color: transparent;
   color: #d63200;
 }
 
-.button.is-warning.is-light:active, .button.is-warning.is-light.is-active {
+.button.is-warning.is-light:active, .wpcf7-form input.is-warning.is-light:active[type='submit'], .button.is-warning.is-light.is-active, .wpcf7-form input.is-warning.is-light.is-active[type='submit'] {
   background-color: #ffdcd1;
   border-color: transparent;
   color: #d63200;
 }
 
-.button.is-danger {
+.button.is-danger, .wpcf7-form input.is-danger[type='submit'] {
   background-color: #ff3860;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-danger:hover, .button.is-danger.is-hovered {
+.button.is-danger:hover, .wpcf7-form input.is-danger:hover[type='submit'], .button.is-danger.is-hovered, .wpcf7-form input.is-danger.is-hovered[type='submit'] {
   background-color: #ff2b56;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-danger:focus, .button.is-danger.is-focused {
+.button.is-danger:focus, .wpcf7-form input.is-danger:focus[type='submit'], .button.is-danger.is-focused, .wpcf7-form input.is-danger.is-focused[type='submit'] {
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-danger:focus:not(:active), .button.is-danger.is-focused:not(:active) {
+.button.is-danger:focus:not(:active), .wpcf7-form input.is-danger:focus:not(:active)[type='submit'], .button.is-danger.is-focused:not(:active), .wpcf7-form input.is-danger.is-focused:not(:active)[type='submit'] {
   box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);
 }
 
-.button.is-danger:active, .button.is-danger.is-active {
+.button.is-danger:active, .wpcf7-form input.is-danger:active[type='submit'], .button.is-danger.is-active, .wpcf7-form input.is-danger.is-active[type='submit'] {
   background-color: #ff1f4b;
   border-color: transparent;
   color: #fff;
 }
 
-.button.is-danger[disabled],
-fieldset[disabled] .button.is-danger {
+.button.is-danger[disabled], .wpcf7-form input.is-danger[disabled][type='submit'],
+fieldset[disabled] .button.is-danger,
+fieldset[disabled] .wpcf7-form input.is-danger[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-danger[type='submit'] {
   background-color: #ff3860;
   border-color: transparent;
   box-shadow: none;
 }
 
-.button.is-danger.is-inverted {
+.button.is-danger.is-inverted, .wpcf7-form input.is-danger.is-inverted[type='submit'] {
   background-color: #fff;
   color: #ff3860;
 }
 
-.button.is-danger.is-inverted:hover, .button.is-danger.is-inverted.is-hovered {
+.button.is-danger.is-inverted:hover, .wpcf7-form input.is-danger.is-inverted:hover[type='submit'], .button.is-danger.is-inverted.is-hovered, .wpcf7-form input.is-danger.is-inverted.is-hovered[type='submit'] {
   background-color: #f2f2f2;
 }
 
-.button.is-danger.is-inverted[disabled],
-fieldset[disabled] .button.is-danger.is-inverted {
+.button.is-danger.is-inverted[disabled], .wpcf7-form input.is-danger.is-inverted[disabled][type='submit'],
+fieldset[disabled] .button.is-danger.is-inverted,
+fieldset[disabled] .wpcf7-form input.is-danger.is-inverted[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-danger.is-inverted[type='submit'] {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
   color: #ff3860;
 }
 
-.button.is-danger.is-loading::after {
+.button.is-danger.is-loading::after, .wpcf7-form input.is-danger.is-loading[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-danger.is-outlined {
+.button.is-danger.is-outlined, .wpcf7-form input.is-danger.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #ff3860;
   color: #ff3860;
 }
 
-.button.is-danger.is-outlined:hover, .button.is-danger.is-outlined.is-hovered, .button.is-danger.is-outlined:focus, .button.is-danger.is-outlined.is-focused {
+.button.is-danger.is-outlined:hover, .wpcf7-form input.is-danger.is-outlined:hover[type='submit'], .button.is-danger.is-outlined.is-hovered, .wpcf7-form input.is-danger.is-outlined.is-hovered[type='submit'], .button.is-danger.is-outlined:focus, .wpcf7-form input.is-danger.is-outlined:focus[type='submit'], .button.is-danger.is-outlined.is-focused, .wpcf7-form input.is-danger.is-outlined.is-focused[type='submit'] {
   background-color: #ff3860;
   border-color: #ff3860;
   color: #fff;
 }
 
-.button.is-danger.is-outlined.is-loading::after {
+.button.is-danger.is-outlined.is-loading::after, .wpcf7-form input.is-danger.is-outlined.is-loading[type='submit']::after {
   border-color: transparent transparent #ff3860 #ff3860 !important;
 }
 
-.button.is-danger.is-outlined.is-loading:hover::after, .button.is-danger.is-outlined.is-loading.is-hovered::after, .button.is-danger.is-outlined.is-loading:focus::after, .button.is-danger.is-outlined.is-loading.is-focused::after {
+.button.is-danger.is-outlined.is-loading:hover::after, .wpcf7-form input.is-danger.is-outlined.is-loading[type='submit']:hover::after, .button.is-danger.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-danger.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-danger.is-outlined.is-loading:focus::after, .wpcf7-form input.is-danger.is-outlined.is-loading[type='submit']:focus::after, .button.is-danger.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-danger.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #fff #fff !important;
 }
 
-.button.is-danger.is-outlined[disabled],
-fieldset[disabled] .button.is-danger.is-outlined {
+.button.is-danger.is-outlined[disabled], .wpcf7-form input.is-danger.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-danger.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-danger.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-danger.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #ff3860;
   box-shadow: none;
   color: #ff3860;
 }
 
-.button.is-danger.is-inverted.is-outlined {
+.button.is-danger.is-inverted.is-outlined, .wpcf7-form input.is-danger.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-.button.is-danger.is-inverted.is-outlined:hover, .button.is-danger.is-inverted.is-outlined.is-hovered, .button.is-danger.is-inverted.is-outlined:focus, .button.is-danger.is-inverted.is-outlined.is-focused {
+.button.is-danger.is-inverted.is-outlined:hover, .wpcf7-form input.is-danger.is-inverted.is-outlined:hover[type='submit'], .button.is-danger.is-inverted.is-outlined.is-hovered, .wpcf7-form input.is-danger.is-inverted.is-outlined.is-hovered[type='submit'], .button.is-danger.is-inverted.is-outlined:focus, .wpcf7-form input.is-danger.is-inverted.is-outlined:focus[type='submit'], .button.is-danger.is-inverted.is-outlined.is-focused, .wpcf7-form input.is-danger.is-inverted.is-outlined.is-focused[type='submit'] {
   background-color: #fff;
   color: #ff3860;
 }
 
-.button.is-danger.is-inverted.is-outlined.is-loading:hover::after, .button.is-danger.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-danger.is-inverted.is-outlined.is-loading:focus::after, .button.is-danger.is-inverted.is-outlined.is-loading.is-focused::after {
+.button.is-danger.is-inverted.is-outlined.is-loading:hover::after, .wpcf7-form input.is-danger.is-inverted.is-outlined.is-loading[type='submit']:hover::after, .button.is-danger.is-inverted.is-outlined.is-loading.is-hovered::after, .wpcf7-form input.is-danger.is-inverted.is-outlined.is-loading.is-hovered[type='submit']::after, .button.is-danger.is-inverted.is-outlined.is-loading:focus::after, .wpcf7-form input.is-danger.is-inverted.is-outlined.is-loading[type='submit']:focus::after, .button.is-danger.is-inverted.is-outlined.is-loading.is-focused::after, .wpcf7-form input.is-danger.is-inverted.is-outlined.is-loading.is-focused[type='submit']::after {
   border-color: transparent transparent #ff3860 #ff3860 !important;
 }
 
-.button.is-danger.is-inverted.is-outlined[disabled],
-fieldset[disabled] .button.is-danger.is-inverted.is-outlined {
+.button.is-danger.is-inverted.is-outlined[disabled], .wpcf7-form input.is-danger.is-inverted.is-outlined[disabled][type='submit'],
+fieldset[disabled] .button.is-danger.is-inverted.is-outlined,
+fieldset[disabled] .wpcf7-form input.is-danger.is-inverted.is-outlined[type='submit'],
+.wpcf7-form fieldset[disabled] input.is-danger.is-inverted.is-outlined[type='submit'] {
   background-color: transparent;
   border-color: #fff;
   box-shadow: none;
   color: #fff;
 }
 
-.button.is-danger.is-light {
+.button.is-danger.is-light, .wpcf7-form input.is-danger.is-light[type='submit'] {
   background-color: #ffebef;
   color: #db002c;
 }
 
-.button.is-danger.is-light:hover, .button.is-danger.is-light.is-hovered {
+.button.is-danger.is-light:hover, .wpcf7-form input.is-danger.is-light:hover[type='submit'], .button.is-danger.is-light.is-hovered, .wpcf7-form input.is-danger.is-light.is-hovered[type='submit'] {
   background-color: #ffdee4;
   border-color: transparent;
   color: #db002c;
 }
 
-.button.is-danger.is-light:active, .button.is-danger.is-light.is-active {
+.button.is-danger.is-light:active, .wpcf7-form input.is-danger.is-light:active[type='submit'], .button.is-danger.is-light.is-active, .wpcf7-form input.is-danger.is-light.is-active[type='submit'] {
   background-color: #ffd1da;
   border-color: transparent;
   color: #db002c;
 }
 
-.button.is-small {
+.button.is-small, .wpcf7-form input.is-small[type='submit'] {
   border-radius: 2px;
   font-size: 0.75rem;
 }
 
-.button.is-normal {
+.button.is-normal, .wpcf7-form input.is-normal[type='submit'] {
   font-size: 1rem;
 }
 
-.button.is-medium {
+.button.is-medium, .wpcf7-form input.is-medium[type='submit'] {
   font-size: 1.25rem;
 }
 
-.button.is-large {
+.button.is-large, .wpcf7-form input.is-large[type='submit'] {
   font-size: 1.5rem;
 }
 
-.button[disabled],
-fieldset[disabled] .button {
+.button[disabled], .wpcf7-form input[disabled][type='submit'],
+fieldset[disabled] .button,
+fieldset[disabled] .wpcf7-form input[type='submit'],
+.wpcf7-form fieldset[disabled] input[type='submit'] {
   background-color: white;
   border-color: #dbdbdb;
   box-shadow: none;
   opacity: 0.5;
 }
 
-.button.is-fullwidth {
+.button.is-fullwidth, .wpcf7-form input.is-fullwidth[type='submit'] {
   display: flex;
   width: 100%;
 }
 
-.button.is-loading {
+.button.is-loading, .wpcf7-form input.is-loading[type='submit'] {
   color: transparent !important;
   pointer-events: none;
 }
 
-.button.is-loading::after {
+.button.is-loading::after, .wpcf7-form input.is-loading[type='submit']::after {
   position: absolute;
   left: calc(50% - (1em / 2));
   top: calc(50% - (1em / 2));
   position: absolute !important;
 }
 
-.button.is-static {
+.button.is-static, .wpcf7-form input.is-static[type='submit'] {
   background-color: whitesmoke;
   border-color: #dbdbdb;
   color: #7a7a7a;
@@ -1754,7 +1840,7 @@ fieldset[disabled] .button {
   pointer-events: none;
 }
 
-.button.is-rounded {
+.button.is-rounded, .wpcf7-form input.is-rounded[type='submit'] {
   border-radius: 290486px;
   padding-left: calc(1em + 0.25em);
   padding-right: calc(1em + 0.25em);
@@ -1767,11 +1853,11 @@ fieldset[disabled] .button {
   justify-content: flex-start;
 }
 
-.buttons .button {
+.buttons .button, .buttons .wpcf7-form input[type='submit'], .wpcf7-form .buttons input[type='submit'] {
   margin-bottom: 0.5rem;
 }
 
-.buttons .button:not(:last-child):not(.is-fullwidth) {
+.buttons .button:not(:last-child):not(.is-fullwidth), .buttons .wpcf7-form input:not(:last-child):not(.is-fullwidth)[type='submit'], .wpcf7-form .buttons input:not(:last-child):not(.is-fullwidth)[type='submit'] {
   margin-right: 0.5rem;
 }
 
@@ -1783,47 +1869,47 @@ fieldset[disabled] .button {
   margin-bottom: 1rem;
 }
 
-.buttons.are-small .button:not(.is-normal):not(.is-medium):not(.is-large) {
+.buttons.are-small .button:not(.is-normal):not(.is-medium):not(.is-large), .buttons.are-small .wpcf7-form input:not(.is-normal):not(.is-medium):not(.is-large)[type='submit'], .wpcf7-form .buttons.are-small input:not(.is-normal):not(.is-medium):not(.is-large)[type='submit'] {
   border-radius: 2px;
   font-size: 0.75rem;
 }
 
-.buttons.are-medium .button:not(.is-small):not(.is-normal):not(.is-large) {
+.buttons.are-medium .button:not(.is-small):not(.is-normal):not(.is-large), .buttons.are-medium .wpcf7-form input:not(.is-small):not(.is-normal):not(.is-large)[type='submit'], .wpcf7-form .buttons.are-medium input:not(.is-small):not(.is-normal):not(.is-large)[type='submit'] {
   font-size: 1.25rem;
 }
 
-.buttons.are-large .button:not(.is-small):not(.is-normal):not(.is-medium) {
+.buttons.are-large .button:not(.is-small):not(.is-normal):not(.is-medium), .buttons.are-large .wpcf7-form input:not(.is-small):not(.is-normal):not(.is-medium)[type='submit'], .wpcf7-form .buttons.are-large input:not(.is-small):not(.is-normal):not(.is-medium)[type='submit'] {
   font-size: 1.5rem;
 }
 
-.buttons.has-addons .button:not(:first-child) {
+.buttons.has-addons .button:not(:first-child), .buttons.has-addons .wpcf7-form input:not(:first-child)[type='submit'], .wpcf7-form .buttons.has-addons input:not(:first-child)[type='submit'] {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-.buttons.has-addons .button:not(:last-child) {
+.buttons.has-addons .button:not(:last-child), .buttons.has-addons .wpcf7-form input:not(:last-child)[type='submit'], .wpcf7-form .buttons.has-addons input:not(:last-child)[type='submit'] {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   margin-right: -1px;
 }
 
-.buttons.has-addons .button:last-child {
+.buttons.has-addons .button:last-child, .buttons.has-addons .wpcf7-form input:last-child[type='submit'], .wpcf7-form .buttons.has-addons input:last-child[type='submit'] {
   margin-right: 0;
 }
 
-.buttons.has-addons .button:hover, .buttons.has-addons .button.is-hovered {
+.buttons.has-addons .button:hover, .buttons.has-addons .wpcf7-form input:hover[type='submit'], .wpcf7-form .buttons.has-addons input:hover[type='submit'], .buttons.has-addons .button.is-hovered, .buttons.has-addons .wpcf7-form input.is-hovered[type='submit'], .wpcf7-form .buttons.has-addons input.is-hovered[type='submit'] {
   z-index: 2;
 }
 
-.buttons.has-addons .button:focus, .buttons.has-addons .button.is-focused, .buttons.has-addons .button:active, .buttons.has-addons .button.is-active, .buttons.has-addons .button.is-selected {
+.buttons.has-addons .button:focus, .buttons.has-addons .wpcf7-form input:focus[type='submit'], .wpcf7-form .buttons.has-addons input:focus[type='submit'], .buttons.has-addons .button.is-focused, .buttons.has-addons .wpcf7-form input.is-focused[type='submit'], .wpcf7-form .buttons.has-addons input.is-focused[type='submit'], .buttons.has-addons .button:active, .buttons.has-addons .wpcf7-form input:active[type='submit'], .wpcf7-form .buttons.has-addons input:active[type='submit'], .buttons.has-addons .button.is-active, .buttons.has-addons .wpcf7-form input.is-active[type='submit'], .wpcf7-form .buttons.has-addons input.is-active[type='submit'], .buttons.has-addons .button.is-selected, .buttons.has-addons .wpcf7-form input.is-selected[type='submit'], .wpcf7-form .buttons.has-addons input.is-selected[type='submit'] {
   z-index: 3;
 }
 
-.buttons.has-addons .button:focus:hover, .buttons.has-addons .button.is-focused:hover, .buttons.has-addons .button:active:hover, .buttons.has-addons .button.is-active:hover, .buttons.has-addons .button.is-selected:hover {
+.buttons.has-addons .button:focus:hover, .buttons.has-addons .wpcf7-form input:focus:hover[type='submit'], .wpcf7-form .buttons.has-addons input:focus:hover[type='submit'], .buttons.has-addons .button.is-focused:hover, .buttons.has-addons .wpcf7-form input.is-focused:hover[type='submit'], .wpcf7-form .buttons.has-addons input.is-focused:hover[type='submit'], .buttons.has-addons .button:active:hover, .buttons.has-addons .wpcf7-form input:active:hover[type='submit'], .wpcf7-form .buttons.has-addons input:active:hover[type='submit'], .buttons.has-addons .button.is-active:hover, .buttons.has-addons .wpcf7-form input.is-active:hover[type='submit'], .wpcf7-form .buttons.has-addons input.is-active:hover[type='submit'], .buttons.has-addons .button.is-selected:hover, .buttons.has-addons .wpcf7-form input.is-selected:hover[type='submit'], .wpcf7-form .buttons.has-addons input.is-selected:hover[type='submit'] {
   z-index: 4;
 }
 
-.buttons.has-addons .button.is-expanded {
+.buttons.has-addons .button.is-expanded, .buttons.has-addons .wpcf7-form input.is-expanded[type='submit'], .wpcf7-form .buttons.has-addons input.is-expanded[type='submit'] {
   flex-grow: 1;
   flex-shrink: 1;
 }
@@ -1832,7 +1918,7 @@ fieldset[disabled] .button {
   justify-content: center;
 }
 
-.buttons.is-centered:not(.has-addons) .button:not(.is-fullwidth) {
+.buttons.is-centered:not(.has-addons) .button:not(.is-fullwidth), .buttons.is-centered:not(.has-addons) .wpcf7-form input:not(.is-fullwidth)[type='submit'], .wpcf7-form .buttons.is-centered:not(.has-addons) input:not(.is-fullwidth)[type='submit'] {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
@@ -1841,7 +1927,7 @@ fieldset[disabled] .button {
   justify-content: flex-end;
 }
 
-.buttons.is-right:not(.has-addons) .button:not(.is-fullwidth) {
+.buttons.is-right:not(.has-addons) .button:not(.is-fullwidth), .buttons.is-right:not(.has-addons) .wpcf7-form input:not(.is-fullwidth)[type='submit'], .wpcf7-form .buttons.is-right:not(.has-addons) input:not(.is-fullwidth)[type='submit'] {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
@@ -4219,27 +4305,27 @@ fieldset[disabled] .select select:hover {
   margin-right: -1px;
 }
 
-.field.has-addons .control:not(:first-child):not(:last-child) .button,
+.field.has-addons .control:not(:first-child):not(:last-child) .button, .field.has-addons .control:not(:first-child):not(:last-child) .wpcf7-form input[type='submit'], .wpcf7-form .field.has-addons .control:not(:first-child):not(:last-child) input[type='submit'],
 .field.has-addons .control:not(:first-child):not(:last-child) .input,
 .field.has-addons .control:not(:first-child):not(:last-child) .select select {
   border-radius: 0;
 }
 
-.field.has-addons .control:first-child:not(:only-child) .button,
+.field.has-addons .control:first-child:not(:only-child) .button, .field.has-addons .control:first-child:not(:only-child) .wpcf7-form input[type='submit'], .wpcf7-form .field.has-addons .control:first-child:not(:only-child) input[type='submit'],
 .field.has-addons .control:first-child:not(:only-child) .input,
 .field.has-addons .control:first-child:not(:only-child) .select select {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.field.has-addons .control:last-child:not(:only-child) .button,
+.field.has-addons .control:last-child:not(:only-child) .button, .field.has-addons .control:last-child:not(:only-child) .wpcf7-form input[type='submit'], .wpcf7-form .field.has-addons .control:last-child:not(:only-child) input[type='submit'],
 .field.has-addons .control:last-child:not(:only-child) .input,
 .field.has-addons .control:last-child:not(:only-child) .select select {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-.field.has-addons .control .button:not([disabled]):hover, .field.has-addons .control .button:not([disabled]).is-hovered,
+.field.has-addons .control .button:not([disabled]):hover, .field.has-addons .control .wpcf7-form input:not([disabled]):hover[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]):hover[type='submit'], .field.has-addons .control .button:not([disabled]).is-hovered, .field.has-addons .control .wpcf7-form input:not([disabled]).is-hovered[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]).is-hovered[type='submit'],
 .field.has-addons .control .input:not([disabled]):hover,
 .field.has-addons .control .input:not([disabled]).is-hovered,
 .field.has-addons .control .select select:not([disabled]):hover,
@@ -4247,7 +4333,7 @@ fieldset[disabled] .select select:hover {
   z-index: 2;
 }
 
-.field.has-addons .control .button:not([disabled]):focus, .field.has-addons .control .button:not([disabled]).is-focused, .field.has-addons .control .button:not([disabled]):active, .field.has-addons .control .button:not([disabled]).is-active,
+.field.has-addons .control .button:not([disabled]):focus, .field.has-addons .control .wpcf7-form input:not([disabled]):focus[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]):focus[type='submit'], .field.has-addons .control .button:not([disabled]).is-focused, .field.has-addons .control .wpcf7-form input:not([disabled]).is-focused[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]).is-focused[type='submit'], .field.has-addons .control .button:not([disabled]):active, .field.has-addons .control .wpcf7-form input:not([disabled]):active[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]):active[type='submit'], .field.has-addons .control .button:not([disabled]).is-active, .field.has-addons .control .wpcf7-form input:not([disabled]).is-active[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]).is-active[type='submit'],
 .field.has-addons .control .input:not([disabled]):focus,
 .field.has-addons .control .input:not([disabled]).is-focused,
 .field.has-addons .control .input:not([disabled]):active,
@@ -4259,7 +4345,7 @@ fieldset[disabled] .select select:hover {
   z-index: 3;
 }
 
-.field.has-addons .control .button:not([disabled]):focus:hover, .field.has-addons .control .button:not([disabled]).is-focused:hover, .field.has-addons .control .button:not([disabled]):active:hover, .field.has-addons .control .button:not([disabled]).is-active:hover,
+.field.has-addons .control .button:not([disabled]):focus:hover, .field.has-addons .control .wpcf7-form input:not([disabled]):focus:hover[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]):focus:hover[type='submit'], .field.has-addons .control .button:not([disabled]).is-focused:hover, .field.has-addons .control .wpcf7-form input:not([disabled]).is-focused:hover[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]).is-focused:hover[type='submit'], .field.has-addons .control .button:not([disabled]):active:hover, .field.has-addons .control .wpcf7-form input:not([disabled]):active:hover[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]):active:hover[type='submit'], .field.has-addons .control .button:not([disabled]).is-active:hover, .field.has-addons .control .wpcf7-form input:not([disabled]).is-active:hover[type='submit'], .wpcf7-form .field.has-addons .control input:not([disabled]).is-active:hover[type='submit'],
 .field.has-addons .control .input:not([disabled]):focus:hover,
 .field.has-addons .control .input:not([disabled]).is-focused:hover,
 .field.has-addons .control .input:not([disabled]):active:hover,
@@ -5244,7 +5330,7 @@ button.dropdown-item.is-active {
   border-top: 1px solid #dbdbdb;
 }
 
-.modal-card-foot .button:not(:last-child) {
+.modal-card-foot .button:not(:last-child), .modal-card-foot .wpcf7-form input:not(:last-child)[type='submit'], .wpcf7-form .modal-card-foot input:not(:last-child)[type='submit'] {
   margin-right: 0.5em;
 }
 
@@ -11261,10 +11347,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 @media screen and (max-width: 768px) {
-  .hero-buttons .button {
+  .hero-buttons .button, .hero-buttons .wpcf7-form input[type='submit'], .wpcf7-form .hero-buttons input[type='submit'] {
     display: flex;
   }
-  .hero-buttons .button:not(:last-child) {
+  .hero-buttons .button:not(:last-child), .hero-buttons .wpcf7-form input:not(:last-child)[type='submit'], .wpcf7-form .hero-buttons input:not(:last-child)[type='submit'] {
     margin-bottom: 0.75rem;
   }
 }
@@ -11274,7 +11360,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     display: flex;
     justify-content: center;
   }
-  .hero-buttons .button:not(:last-child) {
+  .hero-buttons .button:not(:last-child), .hero-buttons .wpcf7-form input:not(:last-child)[type='submit'], .wpcf7-form .hero-buttons input:not(:last-child)[type='submit'] {
     margin-right: 1.5rem;
   }
 }
@@ -11326,18 +11412,29 @@ h2 {
 }
 
 /* ========================= */
+/* Form Styles */
+/* ========================= */
+.wpcf7-form input[type='email'],
+.wpcf7-form input[type='text'],
+.wpcf7-form textarea {
+  padding: 14px 18px;
+  width: 100%;
+}
+
+/* ========================= */
 /* Components */
 /* ========================= */
-.button {
+.button, .wpcf7-form input[type='submit'] {
   background: rgba(255, 255, 255, 0.8);
   border: 3px solid #106ca8;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   color: #106ca8;
   font-weight: 600;
+  line-height: 0;
   transition: .25s background ease-in-out;
 }
 
-.button:hover {
+.button:hover, .wpcf7-form input:hover[type='submit'] {
   background: white;
   border-color: #106ca8;
   color: #106ca8;
@@ -11892,7 +11989,7 @@ pre {
   margin-bottom: 1em;
 }
 
-.button.is-clear {
+.button.is-clear, .wpcf7-form input.is-clear[type='submit'] {
   background: none;
   outline: 0;
   border: none;

@@ -17,6 +17,20 @@ h2
   // important to override bulma styles
 
 /* ========================= */
+/* Form Styles
+/* ========================= */
+
+.wpcf7-form
+  input[type='email'],
+  input[type='text'],
+  textarea
+    padding: 14px 18px
+    width: 100%
+
+  input[type='submit']
+    @extend .button
+
+/* ========================= */
 /* Components
 /* ========================= */
 
@@ -27,6 +41,7 @@ h2
   box-shadow: 0 1px 5px rgba(0, 0, 0, .2)
   color: $secondary
   font-weight: 600
+  line-height: 0
   transition: .25s background ease-in-out
 
   &:hover
