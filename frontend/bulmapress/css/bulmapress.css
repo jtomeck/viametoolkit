@@ -11713,6 +11713,20 @@ h2 {
   background: rgba(16, 108, 168, 0.8);
 }
 
+/* ========================= */
+/* Interior Pages */
+/* ========================= */
+.page-hero {
+  background: #254351;
+  margin: 0 !important;
+  padding: 25px 0;
+}
+
+.page-hero .title {
+  color: white;
+  margin: 0 0 10px;
+}
+
 @media screen and (min-width: 960px) {
   /* ========================= */
   /* Hero Styles */
