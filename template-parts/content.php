@@ -8,22 +8,25 @@
  */
 ?>
 
+<header class="content page-hero">
+  <div class="container">
+    <?php if ( is_single() ) : ?>
+      <?php bulmapress_the_title('is-1', FALSE); ?>
+    <?php elseif ( 'page' === get_post_type() ) : ?>
+      <?php bulmapress_the_title('is-2', FALSE); ?>
+    <?php else : ?>
+      <?php bulmapress_the_title('is-2'); ?>
+    <?php endif; ?>
+    <?php if ( 'post' === get_post_type() ) : ?>
+      <div class="subtitle is-6">
+        <?php bulmapress_posted_on(); ?>
+      </div><!-- .entry-meta -->
+    <?php endif; ?>
+  </div>
+</header><!-- .entry-header -->
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
 	<div class="container">
-		<header class="content">
-			<?php if ( is_single() ) : ?>
-				<?php bulmapress_the_title('is-1', FALSE); ?>
-			<?php elseif ( 'page' === get_post_type() ) : ?>
-				<?php bulmapress_the_title('is-2', FALSE); ?>
-			<?php else : ?>
-				<?php bulmapress_the_title('is-2'); ?>
-			<?php endif; ?>
-			<?php if ( 'post' === get_post_type() ) : ?>
-				<div class="subtitle is-6">
-					<?php bulmapress_posted_on(); ?>
-				</div><!-- .entry-meta -->
-			<?php endif; ?>
-		</header><!-- .entry-header -->
 
 		<div class="content entry-content">
 			<?php the_content( sprintf(
