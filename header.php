@@ -22,7 +22,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( $post->post_name ); ?>>
 	<div id="page" class="site">
 		<?php bulmapress_skip_link_screen_reader_text(); ?>
 		<header id="header">
