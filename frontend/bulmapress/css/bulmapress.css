@@ -11456,6 +11456,11 @@ h2 {
   background: url("../../img/icon-docs.svg") no-repeat;
 }
 
+.wptb-button {
+  border-top: 2px solid #00a14b;
+  text-align: center;
+}
+
 .has-play-btn {
   position: relative;
 }
