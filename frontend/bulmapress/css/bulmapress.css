@@ -11440,6 +11440,22 @@ h2 {
   color: #106ca8;
 }
 
+.button.has-icon::before, .wpcf7-form input.has-icon[type='submit']::before {
+  content: '';
+  display: inline;
+  height: 25px;
+  margin-right: 10px;
+  width: 25px;
+}
+
+.button.has-icon.icon-github::before, .wpcf7-form input.has-icon.icon-github[type='submit']::before {
+  background: url("../../img/icon-github.svg") no-repeat;
+}
+
+.button.has-icon.icon-docs::before, .wpcf7-form input.has-icon.icon-docs[type='submit']::before {
+  background: url("../../img/icon-docs.svg") no-repeat;
+}
+
 .has-play-btn {
   position: relative;
 }
@@ -11822,6 +11838,22 @@ h2 {
 .page-hero .title {
   color: white;
   margin: 0 0 10px;
+}
+
+.installation .page-hero {
+  background: url("../../img/hero_installation.png") center center no-repeat;
+  background-size: 100%;
+  padding: 75px 0;
+  position: relative;
+}
+
+.installation .page-hero .container {
+  z-index: 2;
+}
+
+.installation .page-hero .is-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 @media screen and (min-width: 960px) {
