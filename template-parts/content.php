@@ -9,7 +9,7 @@
 ?>
 
 <header class="content page-hero">
-  <div class="container">
+  <div class="container has-text-centered">
     <?php if ( is_single() ) : ?>
       <?php bulmapress_the_title('is-1', FALSE); ?>
     <?php elseif ( 'page' === get_post_type() ) : ?>
@@ -23,6 +23,7 @@
       </div><!-- .entry-meta -->
     <?php endif; ?>
   </div>
+  <div class="is-overlay"></div>
 </header><!-- .entry-header -->
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
