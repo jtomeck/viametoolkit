@@ -11861,6 +11861,20 @@ h2 {
   z-index: 1;
 }
 
+.tech-questions {
+  background: url("../../img/viame_waves_bg.png") center center no-repeat;
+  color: white;
+  padding: 30px 30px 45px;
+}
+
+.tech-questions > * {
+  color: white !important;
+}
+
+.tech-questions a {
+  color: #90cdf4;
+}
+
 @media screen and (min-width: 960px) {
   /* ========================= */
   /* Hero Styles */
@@ -11870,6 +11884,12 @@ h2 {
   }
   .hero .hero-text {
     width: 50%;
+  }
+}
+
+@media screen and (min-width: 782px) {
+  .tech-questions {
+    padding: 72px 72px 86px;
   }
 }
 
