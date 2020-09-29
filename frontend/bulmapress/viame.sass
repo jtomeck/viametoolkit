@@ -49,6 +49,22 @@ h2
     border-color: $secondary
     color: $secondary
 
+  &.has-icon
+    &::before
+      content: ''
+      display: inline
+      height: 25px
+      margin-right: 10px
+      width: 25px
+
+    &.icon-github
+      &::before
+        background: url('../../img/icon-github.svg') no-repeat
+
+    &.icon-docs
+      &::before
+        background: url('../../img/icon-docs.svg') no-repeat
+        
 // Video Play Button
 .has-play-btn
   position: relative
